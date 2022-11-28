@@ -19,10 +19,10 @@ namespace Com.Efrata.Service.Core.Test
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .AddInMemoryCollection(new List<KeyValuePair<string, string>>
                 {
-                    new KeyValuePair<string, string>("Secret", "EfrataTESTENVIRONMENT"),
+                    new KeyValuePair<string, string>("Secret", "DANLIRISTESTENVIRONMENT"),
 					new KeyValuePair<string, string>("ASPNETCORE_ENVIRONMENT", "Test"),
                     new KeyValuePair<string, string>("DefaultConnection",  "Server=localhost,1401; Database = com.Efrata.db.core.service.test; User = sa; password = Standar123.; MultipleActiveResultSets = true; ")
-                    //new KeyValuePair<string, string>("DefaultConnection", "Server=(localdb)\\mssqllocaldb;Database=com-Efrata-db-test;Trusted_Connection=True;MultipleActiveResultSets=true"),
+                    //new KeyValuePair<string, string>("DefaultConnection", "Server=(localdb)\\mssqllocaldb;Database=com-danliris-db-test;Trusted_Connection=True;MultipleActiveResultSets=true"),
                    
                 })
                 .Build();
@@ -94,9 +94,7 @@ namespace Com.Efrata.Service.Core.Test
                 .AddTransient<MachineSpinningService>(provider => new MachineSpinningService(provider))
                 .AddTransient<MachineSpinningDataUtil>()
                 .AddTransient<SizeService>(provider => new SizeService(provider) { Username = "TEST" })
-                .AddTransient<SizeDataUtil>()
-                .AddTransient<AccountRoleDataUtil>()
-                .AddTransient<PermissionDataUtil>()
+                .AddTransient<SizeDataUtil>() 
                 .AddTransient(provider => new StorageService(provider) { Username = "TEST" })
                 .AddTransient(provider => new BuyerService(provider) { Username = "TEST" })
                 .AddTransient(provider => new CategoryService(provider) { Username = "TEST" })

@@ -41,6 +41,7 @@ namespace Com.Efrata.Service.Core.Lib.Models
 		public int IncomeTaxesId { get; set; }
 		public string IncomeTaxesName { get; set; }
 		public double? IncomeTaxesRate { get; set; }
+		public string Country { get; set; }
 
 		public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
 		{
@@ -52,8 +53,8 @@ namespace Com.Efrata.Service.Core.Lib.Models
 			if (string.IsNullOrWhiteSpace(this.Name))
 				validationResult.Add(new ValidationResult("Name is required", new List<string> { "name" }));
 
-			if (UseTax==true && string.IsNullOrWhiteSpace(IncomeTaxesName))
-				validationResult.Add(new ValidationResult("PPH is required", new List<string> { "incometax" }));
+			//if (UseTax==true && string.IsNullOrWhiteSpace(IncomeTaxesName))
+			//	validationResult.Add(new ValidationResult("PPH is required", new List<string> { "incometax" }));
 
 			if (this.Import.Equals(null))
 				this.Import = false;

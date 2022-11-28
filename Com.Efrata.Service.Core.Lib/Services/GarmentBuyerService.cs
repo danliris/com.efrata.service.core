@@ -263,6 +263,17 @@ namespace Com.Efrata.Service.Core.Lib.Services
             }
 
             return Tuple.Create(Valid, ErrorList);
+        } 
+
+        public List<GarmentBuyer> GetSimple()
+        {
+            return this.DbSet.Select(x => new GarmentBuyer()
+            {
+                Id = x.Id,
+                Code = x.Code,
+                Name = x.Name,
+                Type = x.Type
+            }).ToList();
         }
     }
 }

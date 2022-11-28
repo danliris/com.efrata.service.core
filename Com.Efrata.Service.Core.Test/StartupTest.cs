@@ -2,8 +2,7 @@
 using Com.Efrata.Service.Core.Lib;
 using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
 using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.Services.Account_and_Roles;
+using Com.Efrata.Service.Core.Lib.Services; 
 using Com.Efrata.Service.Core.Lib.Services.GarmentEMKL;
 using Com.Efrata.Service.Core.Lib.Services.GarmentFabricType;
 using Com.Efrata.Service.Core.Lib.Services.GarmentForwarder;
@@ -99,9 +98,9 @@ namespace Com.Efrata.Service.Core.Test
                 .AddScoped<FinishTypeService>()
                 .AddScoped<StandardTestsService>()
                 .AddScoped<LampStandardService>()
-                .AddScoped<PermissionService>()
+                 
                 .AddScoped<ColorTypeService>()
-                .AddScoped<RolesService>()
+                
                 .AddScoped<GarmentProductService>()
                 .AddScoped<GarmentCategoryService>()
                 .AddScoped<GarmentSupplierService>()
@@ -118,7 +117,7 @@ namespace Com.Efrata.Service.Core.Test
                 .AddTransient<IGarmentTransactionTypeService, GarmentTransactionTypeService>()
                 .AddTransient<IGarmentLeftoverWarehouseProductService, GarmentLeftoverWarehouseProductService>()
                 .AddTransient<IGarmentLeftoverWarehouseComodityService, GarmentLeftoverWarehouseComodityService>()
-                .AddScoped<RolesService>()
+                
                 .AddScoped<SizeService>();
 
 

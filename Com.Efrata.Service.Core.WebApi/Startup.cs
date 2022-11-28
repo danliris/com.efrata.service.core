@@ -2,8 +2,7 @@
 using Com.Efrata.Service.Core.Lib;
 using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
 using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.Services.Account_and_Roles;
+using Com.Efrata.Service.Core.Lib.Services; 
 using Com.Efrata.Service.Core.Lib.Services.GarmentEMKL;
 using Com.Efrata.Service.Core.Lib.Services.GarmentFabricType;
 using Com.Efrata.Service.Core.Lib.Services.GarmentForwarder;
@@ -97,9 +96,9 @@ namespace Com.Efrata.Service.Core.WebApi
                 .AddScoped<FinishTypeService>()
                 .AddScoped<StandardTestsService>()
                 .AddScoped<LampStandardService>()
-                .AddScoped<PermissionService>()
+                 
                 .AddScoped<ColorTypeService>()
-                .AddScoped<RolesService>()
+                
                 .AddScoped<GarmentProductService>()
                 .AddScoped<GarmentCategoryService>()
                 .AddScoped<GarmentSupplierService>()
@@ -126,8 +125,10 @@ namespace Com.Efrata.Service.Core.WebApi
                 .AddTransient<IGarmentAdditionalChargesService, GarmentAdditionalChargesService>()
                 .AddTransient<IIBCurrencyService, IBCurrencyService>()
                 .AddTransient<IBankCashReceiptTypeService, BankCashReceiptTypeService>()
-                .AddScoped<RolesService>()
-                .AddScoped<SizeService>();
+                
+                .AddScoped<SizeService>()
+                .AddScoped<VatService>()
+                .AddScoped<ProductTypeService>();
 
 
             RegisterServices(services);
@@ -226,7 +227,7 @@ namespace Com.Efrata.Service.Core.WebApi
             {
                 var context = serviceScope.ServiceProvider.GetService<CoreDbContext>();
                 context.Database.SetCommandTimeout(1000 * 60 * 10);
-                context.Database.Migrate();
+               // context.Database.Migrate();
             }
             app.UseAuthentication();
             app.UseCors("CorePolicy");

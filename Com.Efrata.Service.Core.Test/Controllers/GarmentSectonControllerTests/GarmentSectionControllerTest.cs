@@ -36,6 +36,9 @@ namespace Com.Efrata.Service.Core.Test.Controllers.GarmentSectonControllerTests
             {
                 Code = guid,
                 Name = string.Format("TEST {0}", guid),
+                Remark = string.Format("TEST {0}", guid),
+                ApprovalCC = string.Format("TEST {0}", guid),
+                ApprovalRO = string.Format("TEST {0}", guid),
             };
         }
 
