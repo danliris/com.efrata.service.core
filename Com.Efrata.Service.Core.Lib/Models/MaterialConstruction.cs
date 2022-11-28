@@ -1,5 +1,5 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Services;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Linq;
 using Com.Moonlay.Models;
 
-namespace Com.Ambassador.Service.Core.Lib.Models
+namespace Com.Efrata.Service.Core.Lib.Models
 {
     public class MaterialConstruction : StandardEntity, IValidatableObject
     {

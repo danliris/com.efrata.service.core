@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 
-namespace Com.Ambassador.Service.Core.WebApi.Helpers
+namespace Com.Efrata.Service.Core.WebApi.Helpers
 {
     public class ResultFormatter
     {

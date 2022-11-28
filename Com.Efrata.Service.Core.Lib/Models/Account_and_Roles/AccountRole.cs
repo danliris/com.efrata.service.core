@@ -4,7 +4,7 @@
 //using System.ComponentModel.DataAnnotations;
 //using System.Text;
 
-//namespace Com.Ambassador.Service.Core.Lib.Models.Account_and_Roles
+//namespace Com.Efrata.Service.Core.Lib.Models.Account_and_Roles
 //{
 //    public class AccountRole : StandardEntity, IValidatableObject
 //    {

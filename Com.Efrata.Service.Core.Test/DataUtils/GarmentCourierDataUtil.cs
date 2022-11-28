@@ -1,11 +1,11 @@
-﻿using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentCourier;
+﻿using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.Services.GarmentCourier;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Ambassador.Service.Core.Test.DataUtils
+namespace Com.Efrata.Service.Core.Test.DataUtils
 {
     public class GarmentCourierDataUtil
     {

@@ -1,8 +1,8 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Models;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Models;
 using System.Collections.Generic;
 
-namespace Com.Ambassador.Service.Core.Lib.ViewModels
+namespace Com.Efrata.Service.Core.Lib.ViewModels
 {
     public class DivisionGroupViewModel : BasicViewModel
     {

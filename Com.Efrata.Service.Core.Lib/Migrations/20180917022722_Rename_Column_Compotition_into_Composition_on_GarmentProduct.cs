@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Com.Ambassador.Service.Core.Lib.Migrations
+namespace Com.Efrata.Service.Core.Lib.Migrations
 {
     public partial class Rename_Column_Compotition_into_Composition_on_GarmentProduct : Migration
     {

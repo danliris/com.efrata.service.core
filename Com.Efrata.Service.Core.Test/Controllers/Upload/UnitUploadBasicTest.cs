@@ -1,4 +1,4 @@
-﻿using Com.Ambassador.Service.Core.Lib.Models;
+﻿using Com.Efrata.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.Upload
+namespace Com.Efrata.Service.Core.Test.Controllers.Upload
 {
     [Collection("TestFixture Collection")]
     public class UnitUploadBasicTest

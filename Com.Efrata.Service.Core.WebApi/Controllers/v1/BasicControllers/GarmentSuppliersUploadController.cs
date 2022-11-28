@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.WebApi.Helpers;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.WebApi.Helpers;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.ViewModels;
 
-namespace Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers
+namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
 {
 	[Produces("application/json")]
 	[ApiVersion("1.0")]

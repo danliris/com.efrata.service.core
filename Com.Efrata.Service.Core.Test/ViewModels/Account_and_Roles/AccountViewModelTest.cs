@@ -1,10 +1,10 @@
-﻿using Com.Ambassador.Service.Core.Lib.ViewModels.Account_and_Roles;
+﻿using Com.Efrata.Service.Core.Lib.ViewModels.Account_and_Roles;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.ViewModels.Account_and_Roles
+namespace Com.Efrata.Service.Core.Test.ViewModels.Account_and_Roles
 {
     public class AccountViewModelTest
     {

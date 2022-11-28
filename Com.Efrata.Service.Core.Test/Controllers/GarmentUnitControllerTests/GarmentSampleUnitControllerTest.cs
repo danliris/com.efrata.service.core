@@ -1,15 +1,15 @@
-﻿using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
-using Com.Ambassador.Service.Core.Test.DataUtils;
-using Com.Ambassador.Service.Core.Test.Helpers;
+﻿using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Test.DataUtils;
+using Com.Efrata.Service.Core.Test.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.GarmentUnitControllerTests
+namespace Com.Efrata.Service.Core.Test.Controllers.GarmentUnitControllerTests
 {
     [Collection("TestFixture Collection")]
     public class GarmentSampleUnitControllerTest : BasicControllerTest<CoreDbContext, GarmentSampleUnitService, Unit, UnitViewModel, GarmentSampleUnitDataUtil>

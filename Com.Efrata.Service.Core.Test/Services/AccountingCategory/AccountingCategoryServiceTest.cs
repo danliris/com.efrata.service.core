@@ -1,7 +1,7 @@
-﻿using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
-using Com.Ambassador.Service.Core.Lib.Services.AccountingCategory;
-using Com.Ambassador.Service.Core.Test.DataUtils;
+﻿using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
+using Com.Efrata.Service.Core.Lib.Services.AccountingCategory;
+using Com.Efrata.Service.Core.Test.DataUtils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Primitives;
@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Services.AccountingCategory
+namespace Com.Efrata.Service.Core.Test.Services.AccountingCategory
 {
    public class AccountingCategoryServiceTest
     {

@@ -1,7 +1,7 @@
 ﻿using Com.Moonlay.Models;
 using System.Collections.Generic;
 
-namespace Com.Ambassador.Service.Core.Lib.Models
+namespace Com.Efrata.Service.Core.Lib.Models
 {
     public class MachineSpinningModel : StandardEntity
     {

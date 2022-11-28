@@ -261,7 +261,7 @@ __pycache__/
 *.pyc
 
 */appsettings.json
-Com.Ambassador.Service.Core.WebApi/Properties/launchSettings.json
+Com.Efrata.Service.Core.WebApi/Properties/launchSettings.json
 
 ### VisualStudioCode ###
 .vscode/*

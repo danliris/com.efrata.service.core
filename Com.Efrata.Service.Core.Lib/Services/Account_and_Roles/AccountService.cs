@@ -1,7 +1,7 @@
-﻿//using Com.Ambassador.Service.Core.Lib.Helpers;
-//using Com.Ambassador.Service.Core.Lib.Interfaces;
-//using Com.Ambassador.Service.Core.Lib.Models.Account_and_Roles;
-//using Com.Ambassador.Service.Core.Lib.ViewModels.Account_and_Roles;
+﻿//using Com.Efrata.Service.Core.Lib.Helpers;
+//using Com.Efrata.Service.Core.Lib.Interfaces;
+//using Com.Efrata.Service.Core.Lib.Models.Account_and_Roles;
+//using Com.Efrata.Service.Core.Lib.ViewModels.Account_and_Roles;
 //using Microsoft.EntityFrameworkCore;
 //using Newtonsoft.Json;
 //using System;
@@ -10,7 +10,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace Com.Ambassador.Service.Core.Lib.Services.Account_and_Roles
+//namespace Com.Efrata.Service.Core.Lib.Services.Account_and_Roles
 //{
 //    public class AccountService : BasicService<CoreDbContext, Account>, IMap<Account, AccountViewModel>
 //    {

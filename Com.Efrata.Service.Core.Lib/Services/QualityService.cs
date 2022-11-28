@@ -1,7 +1,7 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Interfaces;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
@@ -12,7 +12,7 @@ using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 
-namespace Com.Ambassador.Service.Core.Lib.Services
+namespace Com.Efrata.Service.Core.Lib.Services
 {
    public class QualityService : BasicService<CoreDbContext, Quality>, IMap<Quality, QualityViewModel>
     {

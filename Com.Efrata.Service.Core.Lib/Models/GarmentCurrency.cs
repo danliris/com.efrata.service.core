@@ -2,11 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System;
-using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.Services;
 using System.Linq;
-using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Helpers;
 
-namespace Com.Ambassador.Service.Core.Lib.Models
+namespace Com.Efrata.Service.Core.Lib.Models
 {
     public class GarmentCurrency : StandardEntity, IValidatableObject
     {

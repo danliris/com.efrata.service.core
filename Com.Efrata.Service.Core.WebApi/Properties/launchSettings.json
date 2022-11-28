@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Com.Ambassador.Service.Core.WebApi": {
+    "Com.Efrata.Service.Core.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

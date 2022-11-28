@@ -1,16 +1,16 @@
-﻿using Com.Ambassador.Service.Core.Test.Helpers;
-using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
-using Com.Ambassador.Service.Core.Test.DataUtils;
+﻿using Com.Efrata.Service.Core.Test.Helpers;
+using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Test.DataUtils;
 using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using Xunit;
-using Models = Com.Ambassador.Service.Core.Lib.Models;
+using Models = Com.Efrata.Service.Core.Lib.Models;
 
-namespace Com.Ambassador.Service.Core.Test.Services.GarmentDetailCurrency
+namespace Com.Efrata.Service.Core.Test.Services.GarmentDetailCurrency
 {
 	[Collection("ServiceProviderFixture Collection")]
 	public class GarmentDetailCurrencyBasicTest : BasicServiceTest<CoreDbContext, GarmentDetailCurrencyService, Models.GarmentDetailCurrency>

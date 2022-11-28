@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.Value
+namespace Com.Efrata.Service.Core.Test.Controllers.Value
 {
     [Collection("TestFixture Collection")]
     public class ValueBasicTest

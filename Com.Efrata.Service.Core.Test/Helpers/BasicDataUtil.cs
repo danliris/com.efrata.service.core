@@ -1,4 +1,4 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
 using Com.Moonlay.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Ambassador.Service.Core.Test.Helpers
+namespace Com.Efrata.Service.Core.Test.Helpers
 {
     public abstract class BasicDataUtil<TDbContext, TService, TModel>
         where TDbContext : DbContext

@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
-using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
-using Com.Ambassador.Service.Core.Lib.Interfaces;
-using Com.Ambassador.Service.Core.WebApi.Utils;
+using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
+using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
+using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Efrata.Service.Core.WebApi.Utils;
 using Com.Moonlay.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +16,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Utils
+namespace Com.Efrata.Service.Core.Test.Utils
 {
     public abstract class BaseControllerTest<TController, TModel, TViewModel, IService>
         where TController : BaseController<TModel, TViewModel, IService>

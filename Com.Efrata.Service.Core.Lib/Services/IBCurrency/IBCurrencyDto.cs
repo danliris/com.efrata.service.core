@@ -1,7 +1,7 @@
-﻿using Com.Ambassador.Service.Core.Lib.Models;
+﻿using Com.Efrata.Service.Core.Lib.Models;
 using System;
 
-namespace Com.Ambassador.Service.Core.Lib.Services.IBCurrency
+namespace Com.Efrata.Service.Core.Lib.Services.IBCurrency
 {
     public class IBCurrencyDto
     {

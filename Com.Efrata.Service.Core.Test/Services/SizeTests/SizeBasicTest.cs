@@ -1,13 +1,13 @@
-﻿using Com.Ambassador.Service.Core.Test.Helpers;
-using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Services;
+﻿using Com.Efrata.Service.Core.Test.Helpers;
+using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using Models = Com.Ambassador.Service.Core.Lib.Models;
+using Models = Com.Efrata.Service.Core.Lib.Models;
 
-namespace Com.Ambassador.Service.Core.Test.Services.SizeTests
+namespace Com.Efrata.Service.Core.Test.Services.SizeTests
 {
     [Collection("ServiceProviderFixture Collection")]
     public class SizeBasicTest : BasicServiceTest<CoreDbContext, SizeService, Models.SizeModel>

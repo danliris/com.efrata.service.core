@@ -1,5 +1,5 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
-using Com.Ambassador.Service.Core.Lib.Models;
+﻿using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
+using Com.Efrata.Service.Core.Lib.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,13 +7,13 @@ using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Com.Moonlay.Models;
-using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Helpers;
 using System.Linq;
 using Newtonsoft.Json;
 using Com.Moonlay.NetCore.Lib;
 using System.Linq.Expressions;
 
-namespace Com.Ambassador.Service.Core.Lib.Services.BankCashReceiptType
+namespace Com.Efrata.Service.Core.Lib.Services.BankCashReceiptType
 {
     public class BankCashReceiptTypeService : IBankCashReceiptTypeService
     {

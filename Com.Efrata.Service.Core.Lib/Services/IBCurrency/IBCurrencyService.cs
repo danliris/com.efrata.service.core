@@ -1,6 +1,6 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
-using Com.Ambassador.Service.Core.Lib.Models;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
+using Com.Efrata.Service.Core.Lib.Models;
 using Com.Moonlay.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -12,7 +12,7 @@ using System.Linq.Dynamic.Core;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Ambassador.Service.Core.Lib.Services.IBCurrency
+namespace Com.Efrata.Service.Core.Lib.Services.IBCurrency
 {
     public class IBCurrencyService : IIBCurrencyService
     {

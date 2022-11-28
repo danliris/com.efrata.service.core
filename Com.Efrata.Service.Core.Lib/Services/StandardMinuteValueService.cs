@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Reflection;
-using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Interfaces;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Newtonsoft.Json;
 
-namespace Com.Ambassador.Service.Core.Lib.Services
+namespace Com.Efrata.Service.Core.Lib.Services
 {
     public class StandardMinuteValueService : BasicService<CoreDbContext, StandardMinuteValue>, IMap<StandardMinuteValue, StandardMinuteValueViewModel>
     {

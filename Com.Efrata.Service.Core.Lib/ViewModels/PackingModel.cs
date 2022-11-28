@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Com.Ambassador.Service.Core.Lib.ViewModels
+namespace Com.Efrata.Service.Core.Lib.ViewModels
 {
     public class PackingModel : IValidatableObject
     {

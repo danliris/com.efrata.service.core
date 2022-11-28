@@ -7,12 +7,12 @@ using System.IO;
 using CsvHelper;
 using Com.Moonlay.NetCore.Lib.Service;
 using CsvHelper.Configuration;
-using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Efrata.Service.Core.Lib.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Com.Moonlay.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace Com.Ambassador.Service.Core.WebApi.Helpers
+namespace Com.Efrata.Service.Core.WebApi.Helpers
 {
     public class BasicUploadController<TService, TModel, TViewModel, TModelMap, TDbContext> : Controller
         where TDbContext : DbContext

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 
-namespace Com.Ambassador.Service.Core.Lib.Helpers
+namespace Com.Efrata.Service.Core.Lib.Helpers
 {
     public abstract class BasicService<TDbContext, TModel> : StandardEntityService<TDbContext, TModel>
         where TDbContext : DbContext

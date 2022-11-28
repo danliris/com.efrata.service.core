@@ -1,9 +1,9 @@
-﻿using Com.Ambassador.Service.Core.Test.Helpers;
-using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
-using Com.Ambassador.Service.Core.Test.DataUtils;
+﻿using Com.Efrata.Service.Core.Test.Helpers;
+using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Test.DataUtils;
 using Com.Moonlay.NetCore.Lib.Service;
 using Newtonsoft.Json;
 using System;
@@ -12,9 +12,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Sdk;
-using Models = Com.Ambassador.Service.Core.Lib.Models;
+using Models = Com.Efrata.Service.Core.Lib.Models;
 
-namespace Com.Ambassador.Service.Core.Test.Services.StandardTest
+namespace Com.Efrata.Service.Core.Test.Services.StandardTest
 {
     [Collection("ServiceProviderFixture Collection")]
     public class GarmentProductBasicTest : BasicServiceTest<CoreDbContext, GarmentProductService, Models.GarmentProduct>

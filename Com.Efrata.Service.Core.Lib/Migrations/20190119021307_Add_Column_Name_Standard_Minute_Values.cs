@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Com.Ambassador.Service.Core.Lib.Migrations
+namespace Com.Efrata.Service.Core.Lib.Migrations
 {
     public partial class Add_Column_Name_Standard_Minute_Values : Migration
     {

@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Com.Ambassador.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib;
 using Microsoft.EntityFrameworkCore;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers
+namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
 {
     [Produces("application/json")]
     [ApiVersion("1.0")]

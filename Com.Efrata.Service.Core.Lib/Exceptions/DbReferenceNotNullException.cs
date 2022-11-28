@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Com.Ambassador.Service.Core.Lib.Exceptions
+namespace Com.Efrata.Service.Core.Lib.Exceptions
 {
     class DbReferenceNotNullException : Exception
     {

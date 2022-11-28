@@ -1,4 +1,4 @@
-﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
+﻿using Com.Efrata.Service.Core.Lib.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.LampStandard
+namespace Com.Efrata.Service.Core.Test.Controllers.LampStandard
 {
     [Collection("TestFixture Collection")]
     public class LampStandardTest

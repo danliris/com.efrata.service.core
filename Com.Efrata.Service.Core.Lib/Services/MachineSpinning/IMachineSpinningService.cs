@@ -1,12 +1,12 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Interfaces;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.ViewModels;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Com.Ambassador.Service.Core.Lib.Services.MachineSpinning
+namespace Com.Efrata.Service.Core.Lib.Services.MachineSpinning
 {
     public interface IMachineSpinningService : IBaseService<MachineSpinningModel>, IBasicUploadCsvService<MachineSpinningCsvViewModel>
     {

@@ -1,21 +1,21 @@
-﻿using Com.Ambassador.Service.Core.Lib.Models;
+﻿using Com.Efrata.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System.Reflection;
 using Com.Moonlay.NetCore.Lib;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Lib.ViewModels;
 using CsvHelper.Configuration;
 using System.Dynamic;
-using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Efrata.Service.Core.Lib.Interfaces;
 using Microsoft.Extensions.Primitives;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace Com.Ambassador.Service.Core.Lib.Services
+namespace Com.Efrata.Service.Core.Lib.Services
 {
     public class UnitService : BasicService<CoreDbContext, Unit>, IBasicUploadCsvService<UnitViewModel>, IMap<Unit, UnitViewModel>
     {

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
-using Com.Ambassador.Service.Core.WebApi.Helpers;
+using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.WebApi.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Com.Ambassador.Service.Core.WebApi.Controllers.v1.UploadControllers
+namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.UploadControllers
 {
     [Produces("application/json")]
     [ApiVersion("1.0")]

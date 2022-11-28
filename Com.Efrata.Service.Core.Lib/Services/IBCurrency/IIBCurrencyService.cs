@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Ambassador.Service.Core.Lib.Services.IBCurrency
+namespace Com.Efrata.Service.Core.Lib.Services.IBCurrency
 {
     public interface IIBCurrencyService
     {

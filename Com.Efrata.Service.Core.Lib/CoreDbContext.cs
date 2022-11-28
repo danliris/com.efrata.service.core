@@ -1,9 +1,9 @@
 ﻿using Com.Moonlay.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.Models.Account_and_Roles;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.Models.Account_and_Roles;
 
-namespace Com.Ambassador.Service.Core.Lib
+namespace Com.Efrata.Service.Core.Lib
 {
     public class CoreDbContext : BaseDbContext
     {

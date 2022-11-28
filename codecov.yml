@@ -1,4 +1,4 @@
 ignore:
-  - "Com.Ambassador.Service.Core.Lib/Migrations"
-  - "Com.Ambassador.Service.Core.WebApi/Startup.cs"
-  - "Com.Ambassador.Service.Core.Test"
+  - "Com.Efrata.Service.Core.Lib/Migrations"
+  - "Com.Efrata.Service.Core.WebApi/Startup.cs"
+  - "Com.Efrata.Service.Core.Test"

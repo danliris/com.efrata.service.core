@@ -1,4 +1,4 @@
-﻿namespace Com.Ambassador.Service.Core.Lib.Helpers.IdentityService
+﻿namespace Com.Efrata.Service.Core.Lib.Helpers.IdentityService
 {
     public interface IIdentityService
     {

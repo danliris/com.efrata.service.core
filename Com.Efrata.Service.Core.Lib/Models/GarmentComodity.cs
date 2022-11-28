@@ -1,5 +1,5 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Services;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Services;
 using Com.Moonlay.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
-namespace Com.Ambassador.Service.Core.Lib.Models
+namespace Com.Efrata.Service.Core.Lib.Models
 {
     public class GarmentComodity : StandardEntity, IValidatableObject
     {

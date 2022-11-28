@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Com.Ambassador.Service.Core.Lib.Helpers
+namespace Com.Efrata.Service.Core.Lib.Helpers
 {
     public class PropertyCopier<OriginClass, DestinationClass>
         where OriginClass : class

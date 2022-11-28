@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
-using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
-using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
-using Com.Ambassador.Service.Core.Lib.Services; 
-using Com.Ambassador.Service.Core.Lib.Services.GarmentEMKL;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentFabricType;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentForwarder;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseBuyer;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseProduct;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentShippingStaff;
-using Com.Ambassador.Service.Core.Lib.Services.MachineSpinning;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentTransactionType;
+using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
+using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
+using Com.Efrata.Service.Core.Lib.Services; 
+using Com.Efrata.Service.Core.Lib.Services.GarmentEMKL;
+using Com.Efrata.Service.Core.Lib.Services.GarmentFabricType;
+using Com.Efrata.Service.Core.Lib.Services.GarmentForwarder;
+using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseBuyer;
+using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseProduct;
+using Com.Efrata.Service.Core.Lib.Services.GarmentShippingStaff;
+using Com.Efrata.Service.Core.Lib.Services.MachineSpinning;
+using Com.Efrata.Service.Core.Lib.Services.GarmentTransactionType;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,18 +25,18 @@ using Swashbuckle.AspNetCore.Swagger;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentCourier;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentInsurance;
-using Com.Ambassador.Service.Core.Lib.Services.BICurrency;
-using Com.Ambassador.Service.Core.Lib.Services.AccountingCategory;
-using Com.Ambassador.Service.Core.Lib.Services.AccountingUnit;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentAdditionalCharges;
-using Com.Ambassador.Service.Core.Lib.Services.BudgetingCategory;
-using Com.Ambassador.Service.Core.Lib.Services.IBCurrency;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseComodity;
-using Com.Ambassador.Service.Core.Lib.Services.BankCashReceiptType;
+using Com.Efrata.Service.Core.Lib.Services.GarmentCourier;
+using Com.Efrata.Service.Core.Lib.Services.GarmentInsurance;
+using Com.Efrata.Service.Core.Lib.Services.BICurrency;
+using Com.Efrata.Service.Core.Lib.Services.AccountingCategory;
+using Com.Efrata.Service.Core.Lib.Services.AccountingUnit;
+using Com.Efrata.Service.Core.Lib.Services.GarmentAdditionalCharges;
+using Com.Efrata.Service.Core.Lib.Services.BudgetingCategory;
+using Com.Efrata.Service.Core.Lib.Services.IBCurrency;
+using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseComodity;
+using Com.Efrata.Service.Core.Lib.Services.BankCashReceiptType;
 
-namespace Com.Ambassador.Service.Core.WebApi
+namespace Com.Efrata.Service.Core.WebApi
 {
     public class Startup
     {
@@ -150,7 +150,7 @@ namespace Com.Ambassador.Service.Core.WebApi
             //services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
             //    .AddIdentityServerAuthentication(options =>
             //    {
-            //        options.ApiName = "com.Ambassador.service";
+            //        options.ApiName = "com.Efrata.service";
             //        options.ApiSecret = secret;
             //        options.Authority = authority;
             //        options.RequireHttpsMetadata = false;

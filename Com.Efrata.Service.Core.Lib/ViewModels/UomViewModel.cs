@@ -1,6 +1,6 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
 
-namespace Com.Ambassador.Service.Core.Lib.ViewModels
+namespace Com.Efrata.Service.Core.Lib.ViewModels
 {
     public class UomViewModel : BasicViewModel
     {

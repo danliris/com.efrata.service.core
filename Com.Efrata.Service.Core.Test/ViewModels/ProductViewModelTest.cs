@@ -1,10 +1,10 @@
-﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
+﻿using Com.Efrata.Service.Core.Lib.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.ViewModels
+namespace Com.Efrata.Service.Core.Test.ViewModels
 {
      public class ProductViewModelTest
     {

@@ -1,10 +1,10 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Services.GarmentShippingStaff;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Services.GarmentShippingStaff;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Com.Ambassador.Service.Core.Lib.ViewModels
+namespace Com.Efrata.Service.Core.Lib.ViewModels
 {
     public class GarmentShippingStaffViewModel : BasicViewModel, IValidatableObject
     {

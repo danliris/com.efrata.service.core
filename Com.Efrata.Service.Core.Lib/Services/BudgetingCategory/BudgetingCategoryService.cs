@@ -1,5 +1,5 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
 using Com.Moonlay.Models;
 using Com.Moonlay.NetCore.Lib;
 using CsvHelper.Configuration;
@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Ambassador.Service.Core.Lib.Services.BudgetingCategory
+namespace Com.Efrata.Service.Core.Lib.Services.BudgetingCategory
 {
     public class BudgetingCategoryService : IBudgetingCategoryService
     {

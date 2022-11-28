@@ -1,10 +1,10 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Helpers
+namespace Com.Efrata.Service.Core.Test.Helpers
 {
     public class GeneralTest
     {

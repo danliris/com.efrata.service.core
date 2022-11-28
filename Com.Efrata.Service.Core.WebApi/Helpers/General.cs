@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Com.Ambassador.Service.Core.WebApi.Helpers
+namespace Com.Efrata.Service.Core.WebApi.Helpers
 {
     public static class General
     {

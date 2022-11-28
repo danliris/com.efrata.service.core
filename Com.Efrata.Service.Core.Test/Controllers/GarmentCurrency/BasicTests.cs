@@ -1,19 +1,19 @@
-﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
+﻿using Com.Efrata.Service.Core.Lib.ViewModels;
 using System;
 using Newtonsoft.Json;
 using System.Net;
-using Models = Com.Ambassador.Service.Core.Lib.Models;
+using Models = Com.Efrata.Service.Core.Lib.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
-using Com.Ambassador.Service.Core.Test.Helpers;
-using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Test.DataUtils;
+using Com.Efrata.Service.Core.Test.Helpers;
+using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Test.DataUtils;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.GarmentCurrency
+namespace Com.Efrata.Service.Core.Test.Controllers.GarmentCurrency
 {
 	[Collection("TestFixture Collection")]
 	public class BasicTests : BasicControllerTest<CoreDbContext, GarmentCurrencyService, Models.GarmentCurrency, GarmentCurrencyViewModel, GarmentCurrencyDataUtil>

@@ -1,7 +1,7 @@
-﻿using Com.Ambassador.Service.Core.Lib;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Lib.Services.MachineSpinning;
-using Com.Ambassador.Service.Core.Test.DataUtils;
+﻿using Com.Efrata.Service.Core.Lib;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.Services.MachineSpinning;
+using Com.Efrata.Service.Core.Test.DataUtils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test
+namespace Com.Efrata.Service.Core.Test
 {
     public class ServiceProviderFixture : IDisposable
     {
@@ -21,7 +21,7 @@ namespace Com.Ambassador.Service.Core.Test
                 {
                     new KeyValuePair<string, string>("Secret", "DANLIRISTESTENVIRONMENT"),
 					new KeyValuePair<string, string>("ASPNETCORE_ENVIRONMENT", "Test"),
-                    new KeyValuePair<string, string>("DefaultConnection",  "Server=localhost,1401; Database = com.Ambassador.db.core.service.test; User = sa; password = Standar123.; MultipleActiveResultSets = true; ")
+                    new KeyValuePair<string, string>("DefaultConnection",  "Server=localhost,1401; Database = com.Efrata.db.core.service.test; User = sa; password = Standar123.; MultipleActiveResultSets = true; ")
                     //new KeyValuePair<string, string>("DefaultConnection", "Server=(localdb)\\mssqllocaldb;Database=com-danliris-db-test;Trusted_Connection=True;MultipleActiveResultSets=true"),
                    
                 })

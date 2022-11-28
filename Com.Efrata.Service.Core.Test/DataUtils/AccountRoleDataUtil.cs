@@ -1,12 +1,12 @@
-﻿//using Com.Ambassador.Service.Core.Lib;
-//using Com.Ambassador.Service.Core.Lib.Models.Account_and_Roles;
-//using Com.Ambassador.Service.Core.Lib.Services.Account_and_Roles;
-//using Com.Ambassador.Service.Core.Lib.ViewModels.Account_and_Roles;
-//using Com.Ambassador.Service.Core.Test.Helpers;
-//using Com.Ambassador.Service.Core.Test.Interface;
+﻿//using Com.Efrata.Service.Core.Lib;
+//using Com.Efrata.Service.Core.Lib.Models.Account_and_Roles;
+//using Com.Efrata.Service.Core.Lib.Services.Account_and_Roles;
+//using Com.Efrata.Service.Core.Lib.ViewModels.Account_and_Roles;
+//using Com.Efrata.Service.Core.Test.Helpers;
+//using Com.Efrata.Service.Core.Test.Interface;
 //using System.Threading.Tasks;
 
-//namespace Com.Ambassador.Service.Core.Test.DataUtils
+//namespace Com.Efrata.Service.Core.Test.DataUtils
 //{
 //    public class AccountRoleDataUtil : BasicDataUtil<CoreDbContext, AccountRoleService, AccountRole>, IEmptyData<AccountRoleViewModel>
 //    {

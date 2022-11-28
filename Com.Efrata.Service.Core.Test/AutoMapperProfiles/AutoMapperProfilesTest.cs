@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using Com.Ambassador.Service.Core.Lib.AutoMapperProfiles;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Lib.AutoMapperProfiles;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.AutoMapperProfiles
+namespace Com.Efrata.Service.Core.Test.AutoMapperProfiles
 {
     public class AutoMapperProfilesTest
     {

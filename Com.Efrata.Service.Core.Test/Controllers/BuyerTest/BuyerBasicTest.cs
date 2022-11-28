@@ -1,4 +1,4 @@
-﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
+﻿using Com.Efrata.Service.Core.Lib.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,11 +8,11 @@ using System.Text;
 using System.Reflection;
 using System.Threading.Tasks;
 using Xunit;
-using Com.Ambassador.Service.Core.Test.DataUtils;
-using Com.Ambassador.Service.Core.Lib.Services;
-using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Test.DataUtils;
+using Com.Efrata.Service.Core.Lib.Services;
+using Com.Efrata.Service.Core.Lib.Models;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.BuyerTest
+namespace Com.Efrata.Service.Core.Test.Controllers.BuyerTest
 {
     [Collection("TestFixture Collection")]
     public class BuyerBasicTest

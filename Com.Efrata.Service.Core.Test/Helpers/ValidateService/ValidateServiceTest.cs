@@ -1,12 +1,12 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.ViewModels;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.ViewModels;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Helpers.ValidateService
+namespace Com.Efrata.Service.Core.Test.Helpers.ValidateService
 {
  public   class ValidateServiceTest
     {

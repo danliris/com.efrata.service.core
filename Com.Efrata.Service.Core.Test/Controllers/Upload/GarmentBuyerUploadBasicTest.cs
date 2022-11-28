@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.Upload
+namespace Com.Efrata.Service.Core.Test.Controllers.Upload
 {
     [Collection("TestFixture Collection")]
     public class GarmentBuyerUploadBasicTest

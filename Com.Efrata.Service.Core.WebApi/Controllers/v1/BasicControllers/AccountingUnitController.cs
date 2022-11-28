@@ -1,9 +1,9 @@
-﻿using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
-using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
-using Com.Ambassador.Service.Core.Lib.Models;
-using Com.Ambassador.Service.Core.Lib.Services.AccountingUnit;
-using Com.Ambassador.Service.Core.WebApi.Utils;
+﻿using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
+using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
+using Com.Efrata.Service.Core.Lib.Models;
+using Com.Efrata.Service.Core.Lib.Services.AccountingUnit;
+using Com.Efrata.Service.Core.WebApi.Utils;
 using Com.Moonlay.NetCore.Lib.Service;
 using CsvHelper;
 using CsvHelper.TypeConversion;
@@ -16,9 +16,9 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using General = Com.Ambassador.Service.Core.WebApi.Helpers.General;
+using General = Com.Efrata.Service.Core.WebApi.Helpers.General;
 
-namespace Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers
+namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
 {
     [Produces("application/json")]
     [ApiVersion("1.0")]

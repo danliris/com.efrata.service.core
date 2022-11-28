@@ -1,11 +1,11 @@
-﻿using Com.Ambassador.Service.Core.Lib.Models;
+﻿using Com.Efrata.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.LibModels
+namespace Com.Efrata.Service.Core.Test.LibModels
 {
   public  class CategoryTest
     {

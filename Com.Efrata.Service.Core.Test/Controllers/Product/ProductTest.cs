@@ -1,5 +1,5 @@
-﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
-using Com.Ambassador.Service.Core.Test.DataUtils;
+﻿using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Efrata.Service.Core.Test.DataUtils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Ambassador.Service.Core.Test.Controllers.Product
+namespace Com.Efrata.Service.Core.Test.Controllers.Product
 {
     [Collection("TestFixture Collection")]
     public class ProductTest

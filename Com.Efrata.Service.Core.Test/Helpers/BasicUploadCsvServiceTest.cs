@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using System.ComponentModel.DataAnnotations;
-using Com.Ambassador.Service.Core.Lib.Helpers;
-using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Efrata.Service.Core.Lib.Interfaces;
 
-namespace Com.Ambassador.Service.Core.Test.Helpers
+namespace Com.Efrata.Service.Core.Test.Helpers
 {
     public class BasicUploadCsvServiceTest<TDbContext, TService, TModel, TViewModel> : IDisposable
         where TDbContext : DbContext
