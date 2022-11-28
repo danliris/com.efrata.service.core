@@ -38,10 +38,10 @@ namespace Com.Efrata.Service.Core.Test
                     new KeyValuePair<string, string>("Authority", "http://localhost:5000"),
                     new KeyValuePair<string, string>("ClientId", "dl-test"),
                     */
-                    new KeyValuePair<string, string>("Secret", "EfrataTESTENVIRONMENT"),
+                    new KeyValuePair<string, string>("Secret", "DANLIRISTESTENVIRONMENT"),
 					new KeyValuePair<string, string>("ASPNETCORE_ENVIRONMENT", "Test"),
                     new KeyValuePair<string, string>("DefaultConnection", "Server=localhost,1401;Database=com.Efrata.db.core.controller.test;User=sa;password=Standar123.;MultipleActiveResultSets=true;")
-                    //new KeyValuePair<string, string>("DefaultConnection", "Server=(localdb)\\mssqllocaldb;Database=com-Efrata-db-test;Trusted_Connection=True;MultipleActiveResultSets=true"),
+                    //new KeyValuePair<string, string>("DefaultConnection", "Server=(localdb)\\mssqllocaldb;Database=com-danliris-db-test;Trusted_Connection=True;MultipleActiveResultSets=true"),
 
                 })
                 .Build();

@@ -56,10 +56,10 @@ namespace Com.Efrata.Service.Core.Lib
         public DbSet<ProcessType> ProcessType { get; set; }
         public DbSet<FinishType> FinishType { get; set; }
         public DbSet<StandardTests> StandardTests { get; set; }
-        public DbSet<AccountProfile> AccountProfiles { get; set; }
-        public DbSet<AccountRole> AccountRoles { get; set; }
-        public DbSet<Permission> Permissions { get; set; }
-        public DbSet<Role> Roles { get; set; }
+        //public DbSet<AccountProfile> AccountProfiles { get; set; }
+        //public DbSet<AccountRole> AccountRoles { get; set; }
+        //public DbSet<Permission> Permissions { get; set; }
+        //public DbSet<Role> Roles { get; set; }
         public DbSet<LampStandard> LampStandard { get; set; }
         public DbSet<ColorTypes> ColorTypes { get; set; }
         public DbSet<GarmentProduct> GarmentProducts { get; set; }
@@ -91,6 +91,8 @@ namespace Com.Efrata.Service.Core.Lib
         public DbSet<IBCurrencyModel> IBCurrencies { get; set; }
         public DbSet<GarmentDetailCurrency> GarmentDetailCurrencies { get; set; }
         public DbSet<BankCashReceiptTypeModel> BankCashReceiptTypes { get; set; }
+        public DbSet<Vat> Vat { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

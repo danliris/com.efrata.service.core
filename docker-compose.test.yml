@@ -1,15 +1,15 @@
 version: '3'
 
 services:
-  Efrata.test.data:
-    image: efrataretailindo/Efrata-test-data:latest
+  danliris.test.data:
+    image: efrataretailindo/danliris-test-data:latest
     environment:
       - DB_CONNECTIONSTRING=mongodb://mongodb:27017
   dl.auth.webapi:
     image: efrataretailindo/dl-auth-webapi:latest
     environment:
       - DB_CONNECTIONSTRING=mongodb://mongodb:27017
-      - AUTH_SECRET=EfrataTESTENVIRONMENT
+      - AUTH_SECRET=DANLIRISTESTENVIRONMENT
       - PORT=5000
       - IP=0.0.0.0
     ports:

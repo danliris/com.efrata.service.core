@@ -17,196 +17,8 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
+                .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.AccountProfile", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AccountId");
-
-                    b.Property<string>("Firstname");
-
-                    b.Property<string>("Gender");
-
-                    b.Property<string>("Lastname");
-
-                    b.Property<string>("UId")
-                        .HasMaxLength(255);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AccountProfiles");
-                });
-
-            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.AccountRole", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AccountId");
-
-                    b.Property<bool>("Active");
-
-                    b.Property<int>("RoleId");
-
-                    b.Property<string>("UId")
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_CreatedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_CreatedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_CreatedUtc");
-
-                    b.Property<string>("_DeletedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_DeletedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_DeletedUtc");
-
-                    b.Property<bool>("_IsDeleted");
-
-                    b.Property<string>("_LastModifiedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_LastModifiedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_LastModifiedUtc");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AccountRoles");
-                });
-
-            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.Permission", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<bool>("Active");
-
-                    b.Property<string>("Division");
-
-                    b.Property<int>("RoleId");
-
-                    b.Property<string>("UId")
-                        .HasMaxLength(255);
-
-                    b.Property<string>("Unit");
-
-                    b.Property<string>("UnitCode");
-
-                    b.Property<int>("UnitId");
-
-                    b.Property<string>("_CreatedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_CreatedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_CreatedUtc");
-
-                    b.Property<string>("_DeletedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_DeletedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_DeletedUtc");
-
-                    b.Property<bool>("_IsDeleted");
-
-                    b.Property<string>("_LastModifiedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_LastModifiedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_LastModifiedUtc");
-
-                    b.Property<int>("permission");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("Permissions");
-                });
-
-            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.Role", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<bool>("Active");
-
-                    b.Property<string>("Code");
-
-                    b.Property<string>("Description");
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("UId")
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_CreatedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_CreatedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_CreatedUtc");
-
-                    b.Property<string>("_DeletedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_DeletedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_DeletedUtc");
-
-                    b.Property<bool>("_IsDeleted");
-
-                    b.Property<string>("_LastModifiedAgent")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<string>("_LastModifiedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("_LastModifiedUtc");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Roles");
-                });
 
             modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.AccountBank", b =>
                 {
@@ -709,6 +521,9 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
 
                     b.Property<string>("Country")
                         .HasMaxLength(500);
+
+                    b.Property<string>("Job")
+                        .HasMaxLength(100);
 
                     b.Property<string>("NIK")
                         .HasMaxLength(100);
@@ -2156,6 +1971,10 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
 
                     b.Property<bool>("Active");
 
+                    b.Property<string>("ApprovalCC");
+
+                    b.Property<string>("ApprovalRO");
+
                     b.Property<string>("Code");
 
                     b.Property<string>("Name");
@@ -2264,6 +2083,8 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
 
                     b.Property<string>("Contact")
                         .HasMaxLength(500);
+
+                    b.Property<string>("Country");
 
                     b.Property<bool?>("Import");
 
@@ -3094,6 +2915,59 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
                     b.ToTable("ProductSPPProperties");
                 });
 
+            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.ProductType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("Active");
+
+                    b.Property<string>("Code");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Remark");
+
+                    b.Property<string>("UId")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("_CreatedAgent")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("_CreatedBy")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime>("_CreatedUtc");
+
+                    b.Property<string>("_DeletedAgent")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("_DeletedBy")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime>("_DeletedUtc");
+
+                    b.Property<bool>("_IsDeleted");
+
+                    b.Property<string>("_LastModifiedAgent")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("_LastModifiedBy")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime>("_LastModifiedUtc");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductTypes");
+                });
+
             modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Quality", b =>
                 {
                     b.Property<int>("Id")
@@ -3153,6 +3027,8 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
                     b.Property<bool>("Active");
 
                     b.Property<string>("Size");
+
+                    b.Property<int>("SizeIdx");
 
                     b.Property<string>("UId")
                         .HasMaxLength(255);
@@ -3620,6 +3496,61 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
                     b.ToTable("UnitOfMeasurements");
                 });
 
+            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Vat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("Active");
+
+                    b.Property<string>("COACodeCredit");
+
+                    b.Property<DateTimeOffset?>("Date");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(500);
+
+                    b.Property<double?>("Rate");
+
+                    b.Property<string>("_CreatedAgent")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("_CreatedBy")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime>("_CreatedUtc");
+
+                    b.Property<string>("_DeletedAgent")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("_DeletedBy")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime>("_DeletedUtc");
+
+                    b.Property<bool>("_IsDeleted");
+
+                    b.Property<string>("_LastModifiedAgent")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("_LastModifiedBy")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime>("_LastModifiedUtc");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vat");
+                });
+
             modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.YarnMaterial", b =>
                 {
                     b.Property<int>("Id")
@@ -3671,22 +3602,6 @@ namespace Com.Efrata.Service.Core.Lib.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("YarnMaterials");
-                });
-
-            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.AccountRole", b =>
-                {
-                    b.HasOne("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.Role", "Role")
-                        .WithMany("AccountRoles")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.Permission", b =>
-                {
-                    b.HasOne("Com.Efrata.Service.Core.Lib.Models.Account_and_Roles.Role", "Role")
-                        .WithMany("Permissions")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Com.Efrata.Service.Core.Lib.Models.MachineSpinningProcessType", b =>
