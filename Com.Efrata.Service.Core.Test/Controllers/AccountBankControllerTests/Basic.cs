@@ -1,4 +1,4 @@
-﻿using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.AccountBankControllerTests
+namespace Com.Ambassador.Service.Core.Test.Controllers.AccountBankControllerTests
 {
     [Collection("TestFixture Collection")]
     public class Basic

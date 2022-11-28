@@ -1,4 +1,4 @@
-﻿namespace Com.Efrata.Service.Core.Lib.Helpers.ValidateService
+﻿namespace Com.Ambassador.Service.Core.Lib.Helpers.ValidateService
 {
     public interface IValidateService
     {

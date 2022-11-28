@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseBuyer;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.WebApi.Utils;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseBuyer;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.WebApi.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
+namespace Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers
 {
     [Produces("application/json")]
     [ApiVersion("1.0")]

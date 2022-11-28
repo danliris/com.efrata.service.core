@@ -1,8 +1,8 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,7 @@ using System.Security.Claims;
 using System.Text;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.UnitTest.Controller
+namespace Com.Ambassador.Service.Core.Test.UnitTest.Controller
 {
     public class UomsControllerTest
     {

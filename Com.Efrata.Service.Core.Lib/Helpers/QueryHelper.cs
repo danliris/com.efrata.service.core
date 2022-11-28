@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 
-namespace Com.Efrata.Service.Core.Lib.Helpers
+namespace Com.Ambassador.Service.Core.Lib.Helpers
 {
     public static class QueryHelper<TModel>
         where TModel : StandardEntity

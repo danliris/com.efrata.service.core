@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Com.Efrata.Service.Core.Lib.Services.IBCurrency
+namespace Com.Ambassador.Service.Core.Lib.Services.IBCurrency
 {
     public class IndexDto
     {

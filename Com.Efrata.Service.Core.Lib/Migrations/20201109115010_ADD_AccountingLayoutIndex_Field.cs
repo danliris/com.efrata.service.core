@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Com.Efrata.Service.Core.Lib.Migrations
+namespace Com.Ambassador.Service.Core.Lib.Migrations
 {
     public partial class ADD_AccountingLayoutIndex_Field : Migration
     {

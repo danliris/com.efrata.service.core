@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
 using System;
 
-namespace Com.Efrata.Service.Core.Lib.ViewModels
+namespace Com.Ambassador.Service.Core.Lib.ViewModels
 {
     public class BuyerViewModel : BasicViewModel
     {
@@ -24,5 +24,7 @@ namespace Com.Efrata.Service.Core.Lib.ViewModels
         
         public string NPWP { get; set; }
         public string NIK { get; set; }
+
+        public string Job { get; set; }
     }
 }

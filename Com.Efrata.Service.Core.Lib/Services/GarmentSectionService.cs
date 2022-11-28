@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Newtonsoft.Json;
 using System;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Reflection;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class GarmentSectionService : BasicService<CoreDbContext, GarmentSection>, IMap<GarmentSection, GarmentSectionViewModel>
     {
@@ -53,7 +53,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             /* Const Select */
             List<string> SelectedFields = new List<string>()
             {
-                "Id", "Code", "Name", "Remark", "_LastModifiedUtc"
+                "Id", "Code", "Name", "Remark", "ApprovalCC", "ApprovalRO", "_LastModifiedUtc"
             };
 
             Query = Query
@@ -63,6 +63,8 @@ namespace Com.Efrata.Service.Core.Lib.Services
                     Code = b.Code,
                     Name = b.Name,
                     Remark = b.Remark,
+                    ApprovalCC = b.ApprovalCC,
+                    ApprovalRO = b.ApprovalRO,
                     _LastModifiedUtc = b._LastModifiedUtc
                 });
 

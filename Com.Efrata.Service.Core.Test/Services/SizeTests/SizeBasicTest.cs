@@ -1,13 +1,13 @@
-﻿using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Services;
+﻿using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using Models = Com.Efrata.Service.Core.Lib.Models;
+using Models = Com.Ambassador.Service.Core.Lib.Models;
 
-namespace Com.Efrata.Service.Core.Test.Services.SizeTests
+namespace Com.Ambassador.Service.Core.Test.Services.SizeTests
 {
     [Collection("ServiceProviderFixture Collection")]
     public class SizeBasicTest : BasicServiceTest<CoreDbContext, SizeService, Models.SizeModel>
@@ -22,11 +22,13 @@ namespace Com.Efrata.Service.Core.Test.Services.SizeTests
         public override void EmptyCreateModel(Models.SizeModel model)
         {
             model.Size = string.Empty;
+            model.SizeIdx = 0;
         }
 
         public override void EmptyUpdateModel(Models.SizeModel model)
         {
             model.Size = string.Empty;
+            model.SizeIdx = 0;
         }
 
         public override Models.SizeModel GenerateTestModel()
@@ -36,6 +38,7 @@ namespace Com.Efrata.Service.Core.Test.Services.SizeTests
             return new Models.SizeModel()
             {
                 Size = string.Format("TEST {0}", guid),
+                SizeIdx = 0,
             };
         }
     }

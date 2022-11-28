@@ -1,15 +1,15 @@
-﻿using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Models;
 using Com.Moonlay.NetCore.Lib.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System.Reflection;
 using Com.Moonlay.NetCore.Lib;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using CsvHelper.Configuration;
 using System.Dynamic;
 using CsvHelper.TypeConversion;
@@ -17,7 +17,7 @@ using Microsoft.Extensions.Primitives;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class IncomeTaxService : BasicService<CoreDbContext, IncomeTax>, IBasicUploadCsvService<IncomeTaxViewModel>, IMap<IncomeTax, IncomeTaxViewModel>
     {

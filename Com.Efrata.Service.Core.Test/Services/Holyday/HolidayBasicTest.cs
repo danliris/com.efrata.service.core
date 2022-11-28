@@ -1,13 +1,13 @@
-﻿using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
+﻿using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Services.Holyday
+namespace Com.Ambassador.Service.Core.Test.Services.Holyday
 {
     [Collection("ServiceProviderFixture Collection")]
     public class HolidayBasicTest : BasicServiceTest<CoreDbContext, HolidayService, Holiday>

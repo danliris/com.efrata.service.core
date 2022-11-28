@@ -1,21 +1,21 @@
-﻿using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System.Reflection;
 using Com.Moonlay.NetCore.Lib;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using CsvHelper.Configuration;
 using System.Dynamic;
 using CsvHelper.TypeConversion;
 using Microsoft.Extensions.Primitives;
 using System.Globalization;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class GarmentDetailCurrencyService : BasicService<CoreDbContext, GarmentDetailCurrency>, IMap<GarmentDetailCurrency, GarmentDetailCurrencyViewModel>
     {
@@ -120,7 +120,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             garmentCurrency._LastModifiedBy = garmentCurrencyVM._LastModifiedBy;
             garmentCurrency._LastModifiedAgent = garmentCurrencyVM._LastModifiedAgent;
             garmentCurrency.Code = garmentCurrencyVM.code;
-            garmentCurrency.Date = garmentCurrencyVM.date;
+            garmentCurrency.Date = garmentCurrencyVM.date.AddHours(7);
             garmentCurrency.Rate = garmentCurrencyVM.rate;
             
             return garmentCurrency;
@@ -158,6 +158,21 @@ namespace Com.Efrata.Service.Core.Lib.Services
             if (currency == null)
                 return null;
             return DbSet.FirstOrDefault(entity => entity.Id == currency.Id);
+        }
+
+        public List<GarmentDetailCurrencyViewModel> GetSingleByCodeDatePEB(List<GarmentDetailCurrencyViewModel> filters)
+        {
+            List<GarmentDetailCurrencyViewModel> data = new List<GarmentDetailCurrencyViewModel>();
+            foreach (var filter in filters)
+            {
+                var model = DbSet.Where(q => q.Code == filter.code && q.Date.Date == filter.date.Date).OrderBy(o => o.Date).FirstOrDefault();
+
+                if (data.Count(ac => ac.Id == model.Id) == 0)
+                {
+                    data.Add(MapToViewModel(model));
+                }
+            }
+            return data;
         }
 
         public GarmentDetailCurrency GetRatePEB(DateTimeOffset date)

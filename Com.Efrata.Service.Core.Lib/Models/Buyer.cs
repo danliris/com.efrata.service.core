@@ -1,11 +1,11 @@
-using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Services;
 using Com.Moonlay.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace Com.Efrata.Service.Core.Lib.Models
+namespace Com.Ambassador.Service.Core.Lib.Models
 {
     public class Buyer : StandardEntity, IValidatableObject
     {
@@ -40,6 +40,8 @@ namespace Com.Efrata.Service.Core.Lib.Models
 
         [StringLength(100)]
         public string NIK { get; set; }
+        [StringLength(100)]
+        public string Job { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
@@ -73,6 +75,9 @@ namespace Com.Efrata.Service.Core.Lib.Models
 
             if (string.IsNullOrEmpty(NIK))
                 validationResult.Add(new ValidationResult("NIK is required", new List<string> { "nik" }));
+
+            if (string.IsNullOrEmpty(Job))
+                validationResult.Add(new ValidationResult("Job is required", new List<string> { "job" }));
 
             return validationResult;
         }

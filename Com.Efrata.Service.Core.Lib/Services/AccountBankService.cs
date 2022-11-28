@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +12,7 @@ using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Reflection;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class AccountBankService : BasicService<CoreDbContext, AccountBank>, IMap<AccountBank, AccountBankViewModel>
     {

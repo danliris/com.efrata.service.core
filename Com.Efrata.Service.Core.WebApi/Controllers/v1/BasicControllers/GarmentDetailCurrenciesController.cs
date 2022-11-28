@@ -1,14 +1,14 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.WebApi.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.WebApi.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
+namespace Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers
 {
     [Produces("application/json")]
     [ApiVersion("1.0")]
@@ -94,6 +94,28 @@ namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
             }
         }
 
+        [HttpGet("single-by-code-date-peb")]
+        public IActionResult GetSingleByCodeDatePEB([FromBody] List<GarmentDetailCurrencyViewModel> filters)
+        {
+            try
+            {
+                List<GarmentDetailCurrencyViewModel> Data = service.GetSingleByCodeDatePEB(filters);
+
+                Dictionary<string, object> Result =
+                     new ResultFormatter(ApiVersion, General.OK_STATUS_CODE, General.OK_MESSAGE)
+                     .Ok(Data);
+
+                return Ok(Result);
+            }
+            catch (Exception e)
+            {
+                Dictionary<string, object> Result =
+                    new ResultFormatter(ApiVersion, General.INTERNAL_ERROR_STATUS_CODE, e.Message)
+                    .Fail();
+                return StatusCode(General.INTERNAL_ERROR_STATUS_CODE, Result);
+            }
+        }
+
         [HttpGet("single-by-code-date")]
         public IActionResult GetSingleByCodeDate([FromQuery] string code, [FromQuery] string stringDate)
         {
@@ -145,6 +167,5 @@ namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
                 return StatusCode(General.INTERNAL_ERROR_STATUS_CODE, Result);
             }
         }
-
     }
 }

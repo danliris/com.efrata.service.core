@@ -1,10 +1,10 @@
-﻿using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
+﻿using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
 using System;
 using Xunit;
-namespace Com.Efrata.Service.Core.Test.Services.BuyerTest
+namespace Com.Ambassador.Service.Core.Test.Services.BuyerTest
 {
     [Collection("ServiceProviderFixture Collection")]
     public class BuyerBasicTest : BasicServiceTest<CoreDbContext, BuyerService, Buyer>

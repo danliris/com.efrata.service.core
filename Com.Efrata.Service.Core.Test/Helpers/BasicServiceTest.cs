@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 using Com.Moonlay.NetCore.Lib.Service;
 using System.Linq;
 using System.Collections.Generic;
-using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Test;
+using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Test;
 
-namespace Com.Efrata.Service.Core.Test.Helpers
+namespace Com.Ambassador.Service.Core.Test.Helpers
 {
     public abstract class BasicServiceTest<TDbContext, TService, TModel> : IDisposable
         where TDbContext : DbContext

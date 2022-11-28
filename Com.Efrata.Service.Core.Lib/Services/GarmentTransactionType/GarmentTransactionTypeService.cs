@@ -1,6 +1,6 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Models;
 using Com.Moonlay.Models;
 using Com.Moonlay.NetCore.Lib;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +12,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Lib.Services.GarmentTransactionType
+namespace Com.Ambassador.Service.Core.Lib.Services.GarmentTransactionType
 {
     public class GarmentTransactionTypeService : IGarmentTransactionTypeService
     {

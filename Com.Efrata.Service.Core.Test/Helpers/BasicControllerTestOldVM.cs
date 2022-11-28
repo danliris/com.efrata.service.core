@@ -1,6 +1,6 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Test.Interface;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Test.Interface;
 using Com.Moonlay.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Helpers
+namespace Com.Ambassador.Service.Core.Test.Helpers
 {
     public abstract class BasicControllerTestOldVM<TDbContext, TService, TModel, TViewModel, TDataUtil>
          where TDbContext : DbContext

@@ -1,6 +1,6 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Models;
 using Com.Moonlay.Models;
 using Com.Moonlay.NetCore.Lib;
 using CsvHelper.Configuration;
@@ -16,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Lib.Services.AccountingUnit
+namespace Com.Ambassador.Service.Core.Lib.Services.AccountingUnit
 {
     public class AccountingUnitService : IAccountingUnitService
     {

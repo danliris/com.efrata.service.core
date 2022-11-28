@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Com.Moonlay.Models;
 using Com.Moonlay.NetCore.Lib;
 using CsvHelper;
@@ -17,7 +17,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Lib.Services.MachineSpinning
+namespace Com.Ambassador.Service.Core.Lib.Services.MachineSpinning
 {
     public class MachineSpinningService : IMachineSpinningService
     {

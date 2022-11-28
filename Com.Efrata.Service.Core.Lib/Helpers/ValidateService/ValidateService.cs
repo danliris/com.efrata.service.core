@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Com.Efrata.Service.Core.Lib.Helpers.ValidateService
+namespace Com.Ambassador.Service.Core.Lib.Helpers.ValidateService
 {
     public class ValidateService : IValidateService
     {

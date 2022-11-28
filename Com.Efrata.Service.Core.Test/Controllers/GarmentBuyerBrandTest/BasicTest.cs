@@ -1,9 +1,9 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Test.DataUtils;
-using Com.Efrata.Service.Core.Test.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.DataUtils;
+using Com.Ambassador.Service.Core.Test.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using Xunit;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.GarmentBuyerBrandTest
+namespace Com.Ambassador.Service.Core.Test.Controllers.GarmentBuyerBrandTest
 {
     [Collection("TestFixture Collection")]
     public class BasicTests : BasicControllerTest<CoreDbContext, GarmentBuyerBrandService, GarmentBuyerBrand, GarmentBuyerBrandViewModel, GarmentBuyerBrandDataUtil>

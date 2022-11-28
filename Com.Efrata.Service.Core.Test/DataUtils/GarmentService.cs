@@ -1,4 +1,4 @@
-﻿namespace Com.Efrata.Service.Core.Test.DataUtils
+﻿namespace Com.Ambassador.Service.Core.Test.DataUtils
 {
     public class GarmentService
     {

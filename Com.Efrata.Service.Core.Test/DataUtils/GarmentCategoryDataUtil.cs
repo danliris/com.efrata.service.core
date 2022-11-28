@@ -1,15 +1,15 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Test.Interface;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Test.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Test.DataUtils
+namespace Com.Ambassador.Service.Core.Test.DataUtils
 {
     public class GarmentCategoryDataUtil : BasicDataUtil<CoreDbContext, GarmentCategoryService, GarmentCategory>, IEmptyData<GarmentCategoryViewModel>
     {
@@ -50,12 +50,30 @@ namespace Com.Efrata.Service.Core.Test.DataUtils
             string guid = Guid.NewGuid().ToString();
             GarmentCategory TestData = new GarmentCategory
             {
-                Name = "TEST",
-                CodeRequirement = "TEST",
-                CategoryType = "TEST",
-                UomId=1,
-                UomUnit = "TEST",
-                Code = guid
+                Name = string.Format("TEST {0}", guid),
+                CodeRequirement = string.Format("TEST {0}", guid),
+                CategoryType = string.Format("TEST {0}", guid),
+                UomId = 1,
+                UomUnit = "uom",
+                Code = string.Format("TEST {0}", guid),
+                UId = guid
+            };
+
+            return TestData;
+        }
+
+        public GarmentCategory GetNewData2()
+        {
+            string guid = Guid.NewGuid().ToString();
+            GarmentCategory TestData = new GarmentCategory
+            {
+                Name = string.Format("TEST {0}", guid),
+                CodeRequirement = string.Format("TEST {0}", guid),
+                CategoryType = string.Format("TEST {0}", guid),
+                UomId = 1,
+                UomUnit = "uom",
+                Code = string.Format("TEST {0}", guid),
+                UId = guid
             };
 
             return TestData;

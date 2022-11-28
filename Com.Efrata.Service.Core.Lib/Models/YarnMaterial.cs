@@ -1,5 +1,5 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Services;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Services;
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using Com.Moonlay.Models;
 
-namespace Com.Efrata.Service.Core.Lib.Models
+namespace Com.Ambassador.Service.Core.Lib.Models
 {
     public class YarnMaterial : StandardEntity, IValidatableObject
     {

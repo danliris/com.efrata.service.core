@@ -1,20 +1,20 @@
-﻿using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Models;
 using Com.Moonlay.NetCore.Lib.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System.Reflection;
 using Com.Moonlay.NetCore.Lib;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using CsvHelper.Configuration;
 using System.Dynamic;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using Microsoft.Extensions.Primitives;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class BudgetService : BasicService<CoreDbContext, Budget>, IBasicUploadCsvService<BudgetViewModel>, IMap<Budget, BudgetViewModel>
     {

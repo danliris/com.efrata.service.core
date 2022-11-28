@@ -1,5 +1,5 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Services;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Services;
 using Com.Moonlay.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -8,13 +8,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Lib.Models
+namespace Com.Ambassador.Service.Core.Lib.Models
 {
     public class SizeModel : StandardEntity, IValidatableObject
     {
         [MaxLength(255)]
         public string UId { get; set; }
         public string Size { get; set; }
+        public int SizeIdx { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             SizeService service = validationContext.GetService<SizeService>();

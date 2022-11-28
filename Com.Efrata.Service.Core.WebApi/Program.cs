@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Com.Efrata.Service.Core.WebApi
+namespace Com.Ambassador.Service.Core.WebApi
 {
     public class Program
     {

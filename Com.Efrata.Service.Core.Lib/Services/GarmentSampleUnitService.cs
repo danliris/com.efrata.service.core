@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +11,7 @@ using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class GarmentSampleUnitService : BasicService<CoreDbContext, Unit>, IMap<Unit, UnitViewModel>
     {
@@ -42,7 +42,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             {
                 "Id", "Code", "Division", "Name"
             };
-            IEnumerable<string> unit = new string[] { "C2A", "C2B", "C2C", "C1A", "C1B","SMP1" };
+            IEnumerable<string> unit = new string[] { "AG1", "AG2" ,"SMP1" };
             Query = from a in Query
                     where (unit.Contains(a.Code))
                     select new Unit

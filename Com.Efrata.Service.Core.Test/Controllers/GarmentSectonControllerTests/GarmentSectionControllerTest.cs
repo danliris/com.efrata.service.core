@@ -1,4 +1,4 @@
-﻿using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.GarmentSectonControllerTests
+namespace Com.Ambassador.Service.Core.Test.Controllers.GarmentSectonControllerTests
 {
     [Collection("TestFixture Collection")]
     public class GarmentSectionControllerTest
@@ -36,6 +36,9 @@ namespace Com.Efrata.Service.Core.Test.Controllers.GarmentSectonControllerTests
             {
                 Code = guid,
                 Name = string.Format("TEST {0}", guid),
+                Remark = string.Format("TEST {0}", guid),
+                ApprovalCC = string.Format("TEST {0}", guid),
+                ApprovalRO = string.Format("TEST {0}", guid),
             };
         }
 

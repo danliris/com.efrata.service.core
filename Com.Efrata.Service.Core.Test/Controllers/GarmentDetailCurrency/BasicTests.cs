@@ -1,19 +1,19 @@
-﻿using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
 using System;
 using Newtonsoft.Json;
 using System.Net;
-using Models = Com.Efrata.Service.Core.Lib.Models;
+using Models = Com.Ambassador.Service.Core.Lib.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
-using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Test.DataUtils;
+using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Test.DataUtils;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.GarmentDetailCurrency
+namespace Com.Ambassador.Service.Core.Test.Controllers.GarmentDetailCurrency
 {
 	[Collection("TestFixture Collection")]
 	public class BasicTests : BasicControllerTest<CoreDbContext, GarmentDetailCurrencyService, Models.GarmentDetailCurrency, GarmentDetailCurrencyViewModel, GarmentDetailCurrencyDataUtil>
@@ -92,6 +92,44 @@ namespace Com.Efrata.Service.Core.Test.Controllers.GarmentDetailCurrency
             Models.GarmentDetailCurrency model = await DataUtil.GetTestDataAsync();
             var response = await this.Client.GetAsync($"{byCodeUri}?stringDate={model.Date.ToString()}");
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task Should_Success_GetByCodeBeforeDatePEB()
+        {
+            string byCodeUri = "v1/master/garment-detail-currencies/single-by-code-date-peb";
+            Models.GarmentDetailCurrency model = await DataUtil.GetTestDataAsync();
+
+            List<GarmentDetailCurrencyViewModel> garmentCurrencies = new List<GarmentDetailCurrencyViewModel>
+            {
+                new GarmentDetailCurrencyViewModel
+                {
+                    code = model.Code,
+                    date = model.Date
+                }
+            };
+            var request = new HttpRequestMessage(HttpMethod.Get, byCodeUri)
+            {
+                Content = new StringContent(JsonConvert.SerializeObject(garmentCurrencies), Encoding.Unicode, "application/json")
+            };
+            var response = await this.Client.SendAsync(request);
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task Should_Error_GetByCodeBeforeDatePEB()
+        {
+            string byCodeUri = "v1/master/garment-detail-currencies/single-by-code-date-peb";
+            Models.GarmentDetailCurrency model = await DataUtil.GetTestDataAsync();
+
+            var request = new HttpRequestMessage(HttpMethod.Get, byCodeUri)
+            {
+                Content = new StringContent(JsonConvert.SerializeObject(null), Encoding.Unicode, "application/json")
+            };
+            var response = await this.Client.SendAsync(request);
+
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
         }
 
     }

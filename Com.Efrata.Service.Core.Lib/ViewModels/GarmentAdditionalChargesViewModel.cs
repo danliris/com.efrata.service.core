@@ -1,10 +1,10 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Services.GarmentAdditionalCharges;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentAdditionalCharges;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Com.Efrata.Service.Core.Lib.ViewModels
+namespace Com.Ambassador.Service.Core.Lib.ViewModels
 {
     public class GarmentAdditionalChargesViewModel : BasicViewModel, IValidatableObject
     {

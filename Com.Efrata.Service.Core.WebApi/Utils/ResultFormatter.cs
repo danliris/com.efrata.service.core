@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 
-namespace Com.Efrata.Service.Core.WebApi.Utils
+namespace Com.Ambassador.Service.Core.WebApi.Utils
 {
     public class ResultFormatter
     {

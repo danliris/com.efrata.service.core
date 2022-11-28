@@ -1,11 +1,11 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Lib.Services.AccountingUnit
+namespace Com.Ambassador.Service.Core.Lib.Services.AccountingUnit
 {
     public interface IAccountingUnitService : IBasicUploadCsvService<Models.AccountingUnit>
     {

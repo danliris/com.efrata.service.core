@@ -1,14 +1,14 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Test.Interface;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Test.Interface;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Test.DataUtils
+namespace Com.Ambassador.Service.Core.Test.DataUtils
 {
     public class SizeDataUtil : BasicDataUtil<CoreDbContext, SizeService, SizeModel>, IEmptyData<SizeViewModel>
     {
@@ -27,6 +27,7 @@ namespace Com.Efrata.Service.Core.Test.DataUtils
             SizeModel TestData = new SizeModel
             {
                 Size = string.Format("TEST {0}", guid),
+                SizeIdx = 0,
                 UId = guid
             };
 

@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +11,7 @@ using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class GarmentCategoryService : BasicService<CoreDbContext, GarmentCategory>, IMap<GarmentCategory, GarmentCategoryViewModel>
     {
@@ -50,11 +50,11 @@ namespace Com.Efrata.Service.Core.Lib.Services
                 {
                     Id = a.Id,
                     Code = a.Code,
-                    Name=a.Name,
-                    UomId=a.UomId,
-                    UomUnit=a.UomUnit,
-                    CodeRequirement=a.CodeRequirement,
-                    CategoryType =a.CategoryType
+                    Name = a.Name,
+                    UomId = a.UomId,
+                    UomUnit = a.UomUnit,
+                    CodeRequirement = a.CodeRequirement,
+                    CategoryType = a.CategoryType
                 });
 
             /* Order */
@@ -94,7 +94,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             categoryViewModel.UOM = new GarmentCategoryUomViewModel
             {
                 Id = (int)category.UomId,
-                Unit= category.UomUnit
+                Unit = category.UomUnit
             };
             categoryViewModel.name = category.Name;
             categoryViewModel.code = category.Code;
@@ -127,18 +127,23 @@ namespace Com.Efrata.Service.Core.Lib.Services
             return garmentCategory;
         }
 
-        //public override void OnCreating(GarmentCategory model)
-        //{
-        //    CodeGenerator codeGenerator = new CodeGenerator();
+        public List<GarmentCategory> GetByIds(List<int> ids)
+        {
+            return this.DbSet.Where(p => ids.Contains(p.Id) && p._IsDeleted == false)
+                .ToList();
+        }
 
-        //    do
-        //    {
-        //        model.Code = codeGenerator.GenerateCode();
-        //    }
-        //    while (this.DbSet.Any(d => d.Code.Equals(model.Code)));
+        public List<GarmentCategory> GetByCode(List<string> code)
+        {
+            //var codes = code.Split(",");
+            //return this.DbSet.IgnoreQueryFilters().FirstOrDefault(p => code == p.Code);
+            return this.DbSet.Where(x => code.Contains(x.Code)).Select(x => x).ToList();
+        }
 
-        //    base.OnCreating(model);
-        //}
+        public GarmentCategory GetByName(string name)
+        {
+            return this.DbSet.FirstOrDefault(p => (p.Name == name) && p._IsDeleted == false);
 
+        }
     }
 }

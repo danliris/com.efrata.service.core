@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using Com.Efrata.Service.Core.Lib.AutoMapperProfiles;
-using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services.MachineSpinning;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Test.Utils;
-using Com.Efrata.Service.Core.WebApi.Controllers.v1.MachineSpinning;
+using Com.Ambassador.Service.Core.Lib.AutoMapperProfiles;
+using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services.MachineSpinning;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.Utils;
+using Com.Ambassador.Service.Core.WebApi.Controllers.v1.MachineSpinning;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.Extensions.Primitives;
@@ -19,7 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.MachineSpinning
+namespace Com.Ambassador.Service.Core.Test.Controllers.MachineSpinning
 {
 
     public class MachineSpinningControllerTest : BaseControllerTest<MachineSpinningController, MachineSpinningModel, MachineSpinningViewModel, IMachineSpinningService>

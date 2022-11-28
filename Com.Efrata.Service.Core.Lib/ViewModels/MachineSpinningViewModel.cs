@@ -1,9 +1,9 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace Com.Efrata.Service.Core.Lib.ViewModels
+namespace Com.Ambassador.Service.Core.Lib.ViewModels
 {
     public class MachineSpinningViewModel : BasicViewModel, IValidatableObject
     {

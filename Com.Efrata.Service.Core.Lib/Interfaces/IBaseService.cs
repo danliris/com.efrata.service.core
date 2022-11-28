@@ -1,10 +1,10 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Lib.Interfaces
+namespace Com.Ambassador.Service.Core.Lib.Interfaces
 {
     public interface IBaseService<TModel>
     {

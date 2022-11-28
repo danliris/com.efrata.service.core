@@ -1,11 +1,11 @@
-﻿using Com.Efrata.Service.Core.Lib.Services;
+﻿using Com.Ambassador.Service.Core.Lib.Services;
 using Com.Moonlay.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace Com.Efrata.Service.Core.Lib.Models
+namespace Com.Ambassador.Service.Core.Lib.Models
 {
     public class OrderType : StandardEntity, IValidatableObject
     {

@@ -1,4 +1,4 @@
-﻿namespace Com.Efrata.Service.Core.Lib.Interfaces
+﻿namespace Com.Ambassador.Service.Core.Lib.Interfaces
 {
     public interface IMap<TModel, TViewModel>
     {

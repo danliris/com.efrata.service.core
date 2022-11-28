@@ -1,4 +1,4 @@
-﻿using Com.Efrata.Service.Core.Lib.ViewModels.Account_and_Roles;
+﻿using Com.Ambassador.Service.Core.Lib.ViewModels.Account_and_Roles;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.Role
+namespace Com.Ambassador.Service.Core.Test.Controllers.Role
 {
     [Collection("TestFixture Collection")]
    public class RoleBasicTest

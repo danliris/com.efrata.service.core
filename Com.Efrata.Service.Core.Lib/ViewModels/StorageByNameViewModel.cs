@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Lib.ViewModels
+namespace Com.Ambassador.Service.Core.Lib.ViewModels
 {
     public class StorageByNameViewModel
     {

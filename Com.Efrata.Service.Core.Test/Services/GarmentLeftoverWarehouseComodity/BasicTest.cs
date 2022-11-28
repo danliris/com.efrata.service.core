@@ -1,8 +1,8 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseComodity;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Test.DataUtils;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseComodity;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.DataUtils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Moq;
@@ -15,7 +15,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Services.GarmentLeftoverWarehouseComodity
+namespace Com.Ambassador.Service.Core.Test.Services.GarmentLeftoverWarehouseComodity
 {
     public class BasicTest
     {

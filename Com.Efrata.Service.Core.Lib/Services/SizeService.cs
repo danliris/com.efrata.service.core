@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +11,7 @@ using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class SizeService : BasicService<CoreDbContext, SizeModel>, IMap<SizeModel, SizeViewModel>
     {
@@ -53,7 +53,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             /* Const Select */
             List<string> SelectedFields = new List<string>()
             {
-                "Id", "Size", "_LastModifiedUtc"
+                "Id", "Size", "SizeIdx", "_LastModifiedUtc"
             };
 
             Query = Query
@@ -61,6 +61,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
                 {
                     Id = b.Id,
                     Size = b.Size,
+                    SizeIdx = b.SizeIdx,
                     _LastModifiedUtc = b._LastModifiedUtc
                 });
 

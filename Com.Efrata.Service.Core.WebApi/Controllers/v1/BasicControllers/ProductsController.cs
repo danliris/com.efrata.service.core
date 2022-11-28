@@ -1,15 +1,15 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.WebApi.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.WebApi.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
+namespace Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers
 {
     [Produces("application/json")]
     [ApiVersion("1.0")]
@@ -30,6 +30,28 @@ namespace Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers
             try
             {
                 Tuple<List<Product>, int, Dictionary<string, string>, List<string>> Data = Service.ReadModelNullTags(Page, Size, Order, Select, Keyword, Filter);
+
+                Dictionary<string, object> Result =
+                    new ResultFormatter(ApiVersion, General.OK_STATUS_CODE, General.OK_MESSAGE)
+                    .Ok<Product, ProductViewModel>(Data.Item1, Service.MapToViewModel, Page, Size, Data.Item2, Data.Item1.Count, Data.Item3, Data.Item4);
+
+                return Ok(Result);
+            }
+            catch (Exception e)
+            {
+                Dictionary<string, object> Result =
+                    new ResultFormatter(ApiVersion, General.INTERNAL_ERROR_STATUS_CODE, e.Message)
+                    .Fail();
+                return StatusCode(General.INTERNAL_ERROR_STATUS_CODE, Result);
+            }
+        }
+
+        [HttpGet("null-price")]
+        public IActionResult GetTagsNullPrice(int Page = 1, int Size = 25, string Order = "{}", [Bind(Prefix = "Select[]")] List<string> Select = null, string Keyword = "", string Filter = "{}")
+        {
+            try
+            {
+                Tuple<List<Product>, int, Dictionary<string, string>, List<string>> Data = Service.ReadModelNullPrice(Page, Size, Order, Select, Keyword, Filter);
 
                 Dictionary<string, object> Result =
                     new ResultFormatter(ApiVersion, General.OK_STATUS_CODE, General.OK_MESSAGE)

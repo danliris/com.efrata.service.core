@@ -1,11 +1,11 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
 using Com.Moonlay.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Lib.Models
+namespace Com.Ambassador.Service.Core.Lib.Models
 {
     public class Quality : StandardEntity, IValidatableObject
     {

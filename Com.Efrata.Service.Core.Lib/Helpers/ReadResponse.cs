@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Com.Efrata.Service.Core.Lib.Helpers
+namespace Com.Ambassador.Service.Core.Lib.Helpers
 {
     public class ReadResponse<TModel>
     {

@@ -1,18 +1,17 @@
 ﻿using AutoMapper;
-using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.Services.Account_and_Roles;
-using Com.Efrata.Service.Core.Lib.Services.GarmentEMKL;
-using Com.Efrata.Service.Core.Lib.Services.GarmentFabricType;
-using Com.Efrata.Service.Core.Lib.Services.GarmentForwarder;
-using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseBuyer;
-using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseComodity;
-using Com.Efrata.Service.Core.Lib.Services.GarmentLeftoverWarehouseProduct;
-using Com.Efrata.Service.Core.Lib.Services.GarmentShippingStaff;
-using Com.Efrata.Service.Core.Lib.Services.GarmentTransactionType;
-using Com.Efrata.Service.Core.Lib.Services.MachineSpinning;
+using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
+using Com.Ambassador.Service.Core.Lib.Services; 
+using Com.Ambassador.Service.Core.Lib.Services.GarmentEMKL;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentFabricType;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentForwarder;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseBuyer;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseComodity;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentLeftoverWarehouseProduct;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentShippingStaff;
+using Com.Ambassador.Service.Core.Lib.Services.GarmentTransactionType;
+using Com.Ambassador.Service.Core.Lib.Services.MachineSpinning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,7 +30,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Test
+namespace Com.Ambassador.Service.Core.Test
 {
     public class StartupTest
     {
@@ -99,9 +98,9 @@ namespace Com.Efrata.Service.Core.Test
                 .AddScoped<FinishTypeService>()
                 .AddScoped<StandardTestsService>()
                 .AddScoped<LampStandardService>()
-                .AddScoped<PermissionService>()
+                 
                 .AddScoped<ColorTypeService>()
-                .AddScoped<RolesService>()
+                
                 .AddScoped<GarmentProductService>()
                 .AddScoped<GarmentCategoryService>()
                 .AddScoped<GarmentSupplierService>()
@@ -118,7 +117,7 @@ namespace Com.Efrata.Service.Core.Test
                 .AddTransient<IGarmentTransactionTypeService, GarmentTransactionTypeService>()
                 .AddTransient<IGarmentLeftoverWarehouseProductService, GarmentLeftoverWarehouseProductService>()
                 .AddTransient<IGarmentLeftoverWarehouseComodityService, GarmentLeftoverWarehouseComodityService>()
-                .AddScoped<RolesService>()
+                
                 .AddScoped<SizeService>();
 
 
@@ -141,7 +140,7 @@ namespace Com.Efrata.Service.Core.Test
             //services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
             //    .AddIdentityServerAuthentication(options =>
             //    {
-            //        options.ApiName = "com.Efrata.service";
+            //        options.ApiName = "com.Ambassador.service";
             //        options.ApiSecret = secret;
             //        options.Authority = authority;
             //        options.RequireHttpsMetadata = false;

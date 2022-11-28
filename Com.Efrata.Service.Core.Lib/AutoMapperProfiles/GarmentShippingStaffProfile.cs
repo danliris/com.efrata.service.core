@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 
-namespace Com.Efrata.Service.Core.Lib.AutoMapperProfiles
+namespace Com.Ambassador.Service.Core.Lib.AutoMapperProfiles
 {
     public class GarmentShippingStaffProfile : Profile
     {

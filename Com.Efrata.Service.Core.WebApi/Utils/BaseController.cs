@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using Com.Moonlay.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,9 +10,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using General = Com.Efrata.Service.Core.WebApi.Helpers.General;
+using General = Com.Ambassador.Service.Core.WebApi.Helpers.General;
 
-namespace Com.Efrata.Service.Core.WebApi.Utils
+namespace Com.Ambassador.Service.Core.WebApi.Utils
 {
     public abstract class BaseController<TModel, TViewModel, IService> : Controller
         where TModel : StandardEntity

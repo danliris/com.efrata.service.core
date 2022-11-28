@@ -1,9 +1,9 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Helpers.IdentityService;
-using Com.Efrata.Service.Core.Lib.Helpers.ValidateService;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services.BICurrency;
-using Com.Efrata.Service.Core.WebApi.Controllers.v1.BasicControllers;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers.IdentityService;
+using Com.Ambassador.Service.Core.Lib.Helpers.ValidateService;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services.BICurrency;
+using Com.Ambassador.Service.Core.WebApi.Controllers.v1.BasicControllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -15,7 +15,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Controllers
+namespace Com.Ambassador.Service.Core.Test.Controllers
 {
     public class BICurrencyControllerTest
     {

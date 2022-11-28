@@ -1,15 +1,15 @@
-﻿using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using Com.Efrata.Service.Core.Test.DataUtils;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.DataUtils;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 
-namespace Com.Efrata.Service.Core.Test.Services.GarmentBuyerBrandTest
+namespace Com.Ambassador.Service.Core.Test.Services.GarmentBuyerBrandTest
 {
     [Collection("ServiceProviderFixture Collection")]
     public class BasicTest : BasicServiceTest<CoreDbContext, GarmentBuyerBrandService, GarmentBuyerBrand>
@@ -75,7 +75,7 @@ namespace Com.Efrata.Service.Core.Test.Services.GarmentBuyerBrandTest
         [Fact]
         public async void UploadDouble()
         {
-            Com.Efrata.Service.Core.Lib.Models.GarmentBuyer garmentBuyer = await BuyerDataUtil.GetTestDataAsync();
+            Com.Ambassador.Service.Core.Lib.Models.GarmentBuyer garmentBuyer = await BuyerDataUtil.GetTestDataAsync();
             GarmentBuyerBrand models = await DataUtil.GetTestDataAsync();
             GarmentBuyerBrandViewModel model = DataUtil.GetUploadData();
             model.Code = models.Code;

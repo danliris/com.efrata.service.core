@@ -1,5 +1,5 @@
-﻿using Com.Efrata.Service.Core.Test.DataUtils;
-using Com.Efrata.Service.Core.WebApi;
+﻿using Com.Ambassador.Service.Core.Test.DataUtils;
+using Com.Ambassador.Service.Core.WebApi;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,9 +11,9 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using Xunit;
-using Com.Efrata.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.Services;
 
-namespace Com.Efrata.Service.Core.Test
+namespace Com.Ambassador.Service.Core.Test
 {
     public class TestServerFixture : IDisposable
     {
@@ -38,10 +38,10 @@ namespace Com.Efrata.Service.Core.Test
                     new KeyValuePair<string, string>("Authority", "http://localhost:5000"),
                     new KeyValuePair<string, string>("ClientId", "dl-test"),
                     */
-                    new KeyValuePair<string, string>("Secret", "EfrataTESTENVIRONMENT"),
+                    new KeyValuePair<string, string>("Secret", "DANLIRISTESTENVIRONMENT"),
 					new KeyValuePair<string, string>("ASPNETCORE_ENVIRONMENT", "Test"),
-                    new KeyValuePair<string, string>("DefaultConnection", "Server=localhost,1401;Database=com.Efrata.db.core.controller.test;User=sa;password=Standar123.;MultipleActiveResultSets=true;")
-                    //new KeyValuePair<string, string>("DefaultConnection", "Server=(localdb)\\mssqllocaldb;Database=com-Efrata-db-test;Trusted_Connection=True;MultipleActiveResultSets=true"),
+                    new KeyValuePair<string, string>("DefaultConnection", "Server=localhost,1401;Database=com.Ambassador.db.core.controller.test;User=sa;password=Standar123.;MultipleActiveResultSets=true;")
+                    //new KeyValuePair<string, string>("DefaultConnection", "Server=(localdb)\\mssqllocaldb;Database=com-danliris-db-test;Trusted_Connection=True;MultipleActiveResultSets=true"),
 
                 })
                 .Build();

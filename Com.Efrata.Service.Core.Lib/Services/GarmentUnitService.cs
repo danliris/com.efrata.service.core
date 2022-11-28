@@ -1,18 +1,18 @@
-﻿using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System.Reflection;
 using Com.Moonlay.NetCore.Lib;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using CsvHelper.Configuration;
 using System.Dynamic;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using Microsoft.Extensions.Primitives;
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
 	public class GarmentUnitService : BasicService<CoreDbContext, Unit> , IMap<Unit, UnitViewModel>
 	{
@@ -43,7 +43,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
 			{
 				"Id", "Code", "Division", "Name"
 			};
-			IEnumerable<string> unit = new string[] { "C2A", "C2B", "C2C", "C1A", "C1B" };
+			IEnumerable<string> unit = new string[] { "AG1", "AG2" };
 			Query = from a in Query
 					where (unit.Contains(a.Code))
 					select new Unit {
@@ -83,6 +83,72 @@ namespace Com.Efrata.Service.Core.Lib.Services
 
 			return Tuple.Create(Data, TotalData, OrderDictionary, SelectedFields);
 		}
+
+		public Tuple<List<Unit>, int, Dictionary<string, string>, List<string>> GarmentandSample(string Order ="{ }",int Page = 1, int Size = 25, List<string> Select = null, string Keyword = null, string Filter = "{}")
+		{
+			IQueryable<Unit> Query = this.DbContext.Units;
+			Dictionary<string, object> FilterDictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(Filter);
+			Query = ConfigureFilter(Query, FilterDictionary);
+			Dictionary<string, string> OrderDictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(Order);
+
+			/* Search With Keyword */
+			if (Keyword != null)
+			{
+				List<string> SearchAttributes = new List<string>()
+				{
+					"Code", "DivisionName", "Name"
+				};
+
+				Query = Query.Where(General.BuildSearch(SearchAttributes), Keyword);
+			}
+
+			/* Const Select */
+			List<string> SelectedFields = new List<string>()
+			{
+				"Id", "Code", "Division", "Name"
+			};
+			IEnumerable<string> unit = new string[] { "AG1", "AG2", "SMP1" };
+			Query = from a in Query
+					where (unit.Contains(a.Code))
+					select new Unit
+					{
+						Id = a.Id,
+						Code = a.Code,
+						DivisionId = a.DivisionId,
+						DivisionCode = a.DivisionCode,
+						DivisionName = a.DivisionName,
+						Name = a.Name
+					};
+
+			/* Order */
+			if (OrderDictionary.Count.Equals(0))
+			{
+				OrderDictionary.Add("Code", General.ASCENDING);
+
+				Query = Query.OrderBy(b => b.Code); /* Default Order */
+			}
+			else
+			{
+				string Key = OrderDictionary.Keys.First();
+				string OrderType = OrderDictionary[Key];
+				string TransformKey = General.TransformOrderBy(Key);
+
+				BindingFlags IgnoreCase = BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance;
+
+				Query = OrderType.Equals(General.ASCENDING) ?
+					Query.OrderBy(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b)) :
+					Query.OrderByDescending(b => b.GetType().GetProperty(TransformKey, IgnoreCase).GetValue(b));
+			}
+
+			/* Pagination */
+			Pageable<Unit> pageable = new Pageable<Unit>(Query, Page - 1, Size);
+			List<Unit> Data = pageable.Data.ToList<Unit>();
+
+			int TotalData = pageable.TotalCount;
+
+			return Tuple.Create(Data, TotalData, OrderDictionary, SelectedFields);
+		}
+
 		public UnitViewModel MapToViewModel(Unit unit)
 		{
 			UnitViewModel unitVM = new UnitViewModel();

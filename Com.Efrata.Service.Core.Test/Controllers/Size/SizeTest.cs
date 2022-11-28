@@ -1,5 +1,5 @@
-﻿using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Test.DataUtils;
+﻿using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.DataUtils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.Size
+namespace Com.Ambassador.Service.Core.Test.Controllers.Size
 {
     [Collection("TestFixture Collection")]
     public class SizeTest

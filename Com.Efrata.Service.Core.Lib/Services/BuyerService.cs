@@ -1,20 +1,20 @@
-﻿using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System.Reflection;
 using Com.Moonlay.NetCore.Lib;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using CsvHelper.Configuration;
 using System.Dynamic;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using CsvHelper.TypeConversion;
 using Microsoft.Extensions.Primitives;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class BuyerService : BasicService<CoreDbContext, Buyer>, IBasicUploadCsvService<BuyerViewModel>, IMap<Buyer, BuyerViewModel>
     {
@@ -46,7 +46,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             /* Const Select */
             List<string> SelectedFields = new List<string>()
             {
-                "Id", "Code", "Name", "Address", "City", "Country", "Contact", "Tempo", "_LastModifiedUtc", "Type", "NPWP","NIK"
+                "Id", "Code", "Name", "Address", "City", "Country", "Contact", "Tempo", "_LastModifiedUtc", "Type", "NPWP","NIK", "Job"
             };
 
             Query = Query
@@ -63,6 +63,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
                     Type = b.Type,
                     NPWP = b. NPWP,
                     NIK = b.NIK,
+                    Job = b.Job,
                     _LastModifiedUtc = b._LastModifiedUtc
                 });
 
@@ -119,6 +120,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             buyerVM.Type = buyer.Type;
             buyerVM.NPWP = buyer.NPWP;
             buyerVM.NIK = buyer.NIK;
+            buyerVM.Job = buyer.Job;
             return buyerVM;
         }
 
@@ -146,6 +148,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
             buyer.Type = buyerVM.Type;
             buyer.NPWP = buyerVM.NPWP;
             buyer.NIK = buyerVM.NIK;
+            buyer.Job = buyerVM.Job;
 
             return buyer;
         }
@@ -153,7 +156,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
         /* Upload CSV */
         private readonly List<string> Header = new List<string>()
         {
-            "Kode Buyer", "Nama", "Alamat", "Kota", "Negara", "NPWP", "Jenis Buyer", "Kontak", "Tempo","NIK"
+            "Kode Buyer", "Nama", "Alamat", "Kota", "Negara", "NPWP", "Jenis Buyer", "Kontak", "Tempo","NIK","Job"
         };
 
         public List<string> CsvHeader => Header;
@@ -172,7 +175,9 @@ namespace Com.Efrata.Service.Core.Lib.Services
                 Map(b => b.Contact).Index(7);
                 Map(b => b.Tempo).Index(8).TypeConverter<StringConverter>();
                 Map(b => b.NIK).Index(9);
+                Map(b => b.Job).Index(10);
             }
+
         }
 
         public Tuple<bool, List<object>> UploadValidate(List<BuyerViewModel> Data, List<KeyValuePair<string, StringValues>> Body)
@@ -263,6 +268,7 @@ namespace Com.Efrata.Service.Core.Lib.Services
                     Error.Add("Kontak", buyerVM.Contact);
                     Error.Add("Tempo", buyerVM.Tempo);
                     Error.Add("NIK", buyerVM.NIK);
+                    Error.Add("Job", buyerVM.Job);
                     Error.Add("Error", ErrorMessage);
 
                     ErrorList.Add(Error);

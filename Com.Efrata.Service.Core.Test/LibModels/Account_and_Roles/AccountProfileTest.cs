@@ -1,10 +1,10 @@
-﻿using Com.Efrata.Service.Core.Lib.Models.Account_and_Roles;
+﻿using Com.Ambassador.Service.Core.Lib.Models.Account_and_Roles;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.LibModels.Account_and_Roles
+namespace Com.Ambassador.Service.Core.Test.LibModels.Account_and_Roles
 {
     public class AccountProfileTest
     {

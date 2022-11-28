@@ -1,20 +1,20 @@
-﻿using Com.Efrata.Service.Core.Lib.Models;
+﻿using Com.Ambassador.Service.Core.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using Newtonsoft.Json;
 using System.Reflection;
 using Com.Moonlay.NetCore.Lib;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using CsvHelper.Configuration;
 using System.Dynamic;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using CsvHelper.TypeConversion;
 using Microsoft.Extensions.Primitives;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class GarmentBuyerService : BasicService<CoreDbContext, GarmentBuyer>, IBasicUploadCsvService<GarmentBuyerViewModel>, IMap<GarmentBuyer, GarmentBuyerViewModel>
     {
@@ -263,6 +263,17 @@ namespace Com.Efrata.Service.Core.Lib.Services
             }
 
             return Tuple.Create(Valid, ErrorList);
+        } 
+
+        public List<GarmentBuyer> GetSimple()
+        {
+            return this.DbSet.Select(x => new GarmentBuyer()
+            {
+                Id = x.Id,
+                Code = x.Code,
+                Name = x.Name,
+                Type = x.Type
+            }).ToList();
         }
     }
 }

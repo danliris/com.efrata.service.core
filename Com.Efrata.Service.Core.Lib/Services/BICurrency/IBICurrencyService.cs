@@ -1,9 +1,9 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.Lib.Services.BICurrency
+namespace Com.Ambassador.Service.Core.Lib.Services.BICurrency
 {
     public interface IBICurrencyService : IBasicUploadCsvService<Models.BICurrency>
     {

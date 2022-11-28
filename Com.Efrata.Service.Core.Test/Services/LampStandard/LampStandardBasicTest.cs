@@ -1,13 +1,13 @@
-﻿using Com.Efrata.Service.Core.Test.Helpers;
-using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Services;
+﻿using Com.Ambassador.Service.Core.Test.Helpers;
+using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using Models = Com.Efrata.Service.Core.Lib.Models;
+using Models = Com.Ambassador.Service.Core.Lib.Models;
 
-namespace Com.Efrata.Service.Core.Test.Services.LampStandard
+namespace Com.Ambassador.Service.Core.Test.Services.LampStandard
 {
     [Collection("ServiceProviderFixture Collection")]
     public class LampStandardBasicTest : BasicServiceTest<CoreDbContext, LampStandardService, Models.LampStandard>

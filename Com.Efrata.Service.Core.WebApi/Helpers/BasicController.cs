@@ -7,11 +7,11 @@ using Com.Moonlay.NetCore.Lib.Service;
 using Microsoft.EntityFrameworkCore;
 using Com.Moonlay.Models;
 using System.ComponentModel.DataAnnotations;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using System.Linq;
 
-namespace Com.Efrata.Service.Core.WebApi.Helpers
+namespace Com.Ambassador.Service.Core.WebApi.Helpers
 {
     public abstract class BasicController<TService, TModel, TViewModel, TDbContext> : Controller
         where TDbContext : DbContext

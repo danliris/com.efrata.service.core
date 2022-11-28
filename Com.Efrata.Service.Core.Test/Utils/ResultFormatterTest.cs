@@ -1,18 +1,18 @@
 ﻿using AutoMapper;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.WebApi.Utils;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.WebApi.Utils;
 using Moq;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using Com.Efrata.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Helpers;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace Com.Efrata.Service.Core.Test.Utils
+namespace Com.Ambassador.Service.Core.Test.Utils
 {
     public class ResultFormatterTest
     {

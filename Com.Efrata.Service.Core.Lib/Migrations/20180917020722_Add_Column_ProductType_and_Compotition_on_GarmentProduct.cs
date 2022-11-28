@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Com.Efrata.Service.Core.Lib.Migrations
+namespace Com.Ambassador.Service.Core.Lib.Migrations
 {
     public partial class Add_Column_ProductType_and_Compotition_on_GarmentProduct : Migration
     {

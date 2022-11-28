@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Com.Efrata.Service.Core.WebApi.Helpers
+namespace Com.Ambassador.Service.Core.WebApi.Helpers
 {
     public static class Constant
     {

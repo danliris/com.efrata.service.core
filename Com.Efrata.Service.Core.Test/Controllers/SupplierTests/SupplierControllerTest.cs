@@ -1,13 +1,13 @@
-﻿using Com.Efrata.Service.Core.Lib;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.Services;
-using Com.Efrata.Service.Core.Lib.ViewModels;
-using Com.Efrata.Service.Core.Test.DataUtils;
-using Com.Efrata.Service.Core.Test.Helpers;
+﻿using Com.Ambassador.Service.Core.Lib;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.Services;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
+using Com.Ambassador.Service.Core.Test.DataUtils;
+using Com.Ambassador.Service.Core.Test.Helpers;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Com.Efrata.Service.Core.Test.Controllers.SupplierTests
+namespace Com.Ambassador.Service.Core.Test.Controllers.SupplierTests
 {
     [Collection("TestFixture Collection")]
     public class SupplierControllerTest : BasicControllerTestOldVM<CoreDbContext, SupplierService, Supplier, SupplierViewModel, SupplierDataUtil>

@@ -1,7 +1,7 @@
-﻿using Com.Efrata.Service.Core.Lib.Helpers;
-using Com.Efrata.Service.Core.Lib.Interfaces;
-using Com.Efrata.Service.Core.Lib.Models;
-using Com.Efrata.Service.Core.Lib.ViewModels;
+﻿using Com.Ambassador.Service.Core.Lib.Helpers;
+using Com.Ambassador.Service.Core.Lib.Interfaces;
+using Com.Ambassador.Service.Core.Lib.Models;
+using Com.Ambassador.Service.Core.Lib.ViewModels;
 using Com.Moonlay.NetCore.Lib;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +11,7 @@ using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 
-namespace Com.Efrata.Service.Core.Lib.Services
+namespace Com.Ambassador.Service.Core.Lib.Services
 {
     public class GarmentComodityService : BasicService<CoreDbContext, GarmentComodity>, IMap<GarmentComodity, GarmentComodityViewModel>
     {
@@ -92,6 +92,26 @@ namespace Com.Efrata.Service.Core.Lib.Services
             int TotalData = pageable.TotalCount;
 
             return Tuple.Create(Data, TotalData, OrderDictionary, SelectedFields);
+        }
+
+        public Tuple<List<GarmentComodity>,int> GetAllComodity()
+        {
+            IQueryable<GarmentComodity> Query = this.DbContext.GarmentComodities;
+
+            Query = Query
+                .Select(b => new GarmentComodity
+                {
+                    Id = b.Id,
+                    Code = b.Code,
+                    Name = b.Name,
+                }).Distinct();
+
+            var Data = Query.ToList();
+
+            int TotalData = Query.Count();
+
+            return Tuple.Create(Data,TotalData);
+        
         }
 
         //public override void OnCreating(GarmentComodity model)
